@@ -11,4 +11,4 @@ d. It’s needed any processing before we use it?
     Yes, cleaning dates, trip durations, and removing invalid rows.
 
 e. Are there null values? In which fields? Measure how many and guess a reason.
-    Yes, sometimes in station names or user type. Likely due to missing GPS or incomplete user info.
+    Yes, sometimes in station names or user type. Likely due to missing GPS or incomplete user information.
