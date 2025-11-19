@@ -16,7 +16,7 @@ download_uris = [
 # Carpeta donde guardaremos los archivos descargados
 DOWNLOAD_DIR = "downloads"
 
-# Función que descarga, descomprime y borra el zip
+# Función que descarga, descomprime y borra el zipcmdm
 def download_and_extract(url: str, folder: str) -> None:
     try:
         # Sacar el nombre del archivo de la URL

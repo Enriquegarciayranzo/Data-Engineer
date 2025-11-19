@@ -1,22 +1,24 @@
-import datetime
-import click
+# Importamos las bibliotecas necesarias
+import os
+import re
 import logging as log
-import utils.files as files
-import utils.songs as songs
+import datetime
+from pathlib import Path
+from utils.string_mapping import MAPPING
 
 # -- Configuration ---
-OUTPUT_DIRECTORY = "./files/"
-LOGS_DIRECTORY = "./logs/"
-ROOT = "https://acordes.lacuerda.net"
-URL_ARTIST_INDEX = f"{ROOT}/tabs/"
-SONG_VERSION = None
-INDEX = "abcdefghijklmnopqrstuvwxyz"
+INPUT_DIRECTORY = Path("./files/")
+CATALOG_DIRECTORY = INPUT_DIRECTORY / "catalogs"
+LOGS_DIRECTORY = Path("./logs/")
+OUTPUT_DIRECTORY = INPUT_DIRECTORY / "cleaned/"
+
+MIN_LINES = 5
+
+dir_list = []
 
 # --- Logging config---
-logger = log.getLogger(__name__)
-
 log.basicConfig(
-    filename=f"{LOGS_DIRECTORY}scrapper.log",
+    filename=LOGS_DIRECTORY / "cleaner.log",
     filemode="w",
     encoding="utf-8",
     format="%(asctime)s %(levelname)-8s %(message)s",
@@ -24,62 +26,92 @@ log.basicConfig(
     level=log.INFO,
 )
 
+logger = log.getLogger(__name__)
 
-# --- Logic --------------------
-@click.command()
-@click.option(
-    "-r",
-    "--reset",
-    is_flag=True,
-    default=False,
-    help="Delete the existing data and start fresh.",
-)
-@click.option(
-    "-uc",
-    "--update_catalog",
-    is_flag=True,
-    default=False,
-    help="Regenerates the catalog.",
-)
-@click.option(
-    "--start_char", "-sc", default="a", help="Starting letter for updating the catalog."
-)
-@click.option(
-    "--end_char", "-ec", default="z", help="Ending letter for updating the catalog."
-)
-def main(reset, update_catalog, start_char, end_char):
-    """Main function to run the scrapper. Can reset data, update catalog, or fetch songs."""
-    print("Starting scrapper...")
+# --- Logic---
+
+def list_files_recursive(path: Path):
+    """
+    Recorre todos los ficheros dentro de `path`, ignorando:
+      - La carpeta `catalogs`
+      - Cualquier fichero que no sea .txt
+    """
+    for entry in path.iterdir():
+        if entry.is_dir():
+            if entry.name == "catalogs":
+                continue
+            list_files_recursive(entry)
+        else:
+            if entry.suffix.lower() != ".txt":
+                continue
+            dir_list.append(entry)
+
+    return dir_list
+
+
+def remove_email_sentences(text: str):
+    email_pattern = r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b"
+    sentence_pattern = r"[\n^.!?]*" + email_pattern + r"[^.!?]*[.!?\n]"
+    return re.sub(sentence_pattern, "", text)
+
+
+def apply_format_rules(text: str):
+    formatted_text = remove_email_sentences(text)
+
+    for key, value in MAPPING.items():
+        formatted_text = re.sub(
+            key,
+            value,
+            formatted_text,
+            flags=re.DOTALL | re.IGNORECASE
+        )
+
+    return formatted_text
+
+
+def main():
 
     # Start time tracking
     start_time = datetime.datetime.now()
-    log.info(f"Scrapper started at {start_time}")
+    log.info(f"Cleaner started at {start_time}")
+    print("Starting cleaner...")
 
-    # Reset data if required
-    if reset:
-        log.info("Remove all downloaded files. Fresh start...")
-        files.delete(OUTPUT_DIRECTORY)
+    cleaned = 0
 
-    # Update catalog if required
-    if update_catalog or not files.check_file_exists(OUTPUT_DIRECTORY, "catalog.json"):
-        log.info("Updating catalog...")
-        catalog = songs.get_catalog(
-            OUTPUT_DIRECTORY,
-            start_char=start_char,
-            end_char=end_char,
-        )
-        files.save_to_json(catalog, OUTPUT_DIRECTORY, "catalog.json")
-        log.info("Catalog updated.")
+    for file_path in list_files_recursive(INPUT_DIRECTORY):
+        log.info(f"Processing file: {file_path}")
 
-        return 200
+        text = file_path.read_text(encoding="utf-8", errors="ignore")
 
-    # Get songs lyrics
-    log.info(f"Starting to download lyrics...")
-    songs.get_songs(OUTPUT_DIRECTORY, version=SONG_VERSION)
+        if text.count("\n") < MIN_LINES:
+            log.info("Empty or too small tab. Skipping.")
+            continue
 
-    duration = datetime.datetime.now() - start_time
+        # Apply cleaning
+        formatted_text = apply_format_rules(text)
+
+        # Calculate secure output path
+        relative = file_path.relative_to(INPUT_DIRECTORY)
+        output_path = OUTPUT_DIRECTORY / relative
+
+        # Create directory if needed
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+
+        # Save cleaned file
+        output_path.write_text(formatted_text, encoding="utf-8")
+
+        cleaned += 1
+        print(cleaned, "--", output_path.name, "CREATED!!")
+
+    end_time = datetime.datetime.now()
+    log.info(f"Cleaner ended at {end_time}")
+    duration = end_time - start_time
     log.info(f"Total duration: {duration}")
-    print(f"Scrapper finished. Duration in seconds: {duration.total_seconds()}.")
+
+    print(
+        f"Cleaner finished. Duration in seconds: {duration.total_seconds()}, "
+        f"that is {duration.total_seconds() / 60} minutes."
+    )
 
 
 if __name__ == "__main__":

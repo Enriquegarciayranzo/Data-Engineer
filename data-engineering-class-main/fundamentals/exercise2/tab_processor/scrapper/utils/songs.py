@@ -1,13 +1,10 @@
 import logging as log
-import json
 import sys
-import utils.beautifulsoup as bs
-import utils.files as files
+from scrapper.utils import beautifulsoup as bs
+from scrapper.utils import files
+from scrapper.utils.data import Song, Artist
 import re
 import time
-
-
-from utils.data import Song, Artist
 from pathlib import Path
 
 # --- Configuration ---
@@ -19,33 +16,16 @@ INDEX = "abcdefghijklmnopqrstuvwxyz"
 
 # --- Utility Functions ---
 def get_version(song, version: int = 0):
-    """Get the song URL and name based on version.
-    Args:
-        song (str): The base song URL.
-        version (int, optional): The version number. Defaults to 0.
-    Returns:
-        tuple: A tuple containing the modified song URL and the song name.
-    """
-
     song = (
         str(song)
         if not version
         else str(song).replace(".shtml", f"-{str(version)}.shtml")
     )
     song_name = str(song).split("/")[-1].replace(".shtml", ".txt")
-
     return song, song_name
 
 
 def get_artists(start_char: str, end_char: str) -> list[Artist]:
-    """Scrapes artist URLs for a given range of starting letters.
-    Args:
-        start_char (str): The starting letter for artists to catalog (e.g., 'a').
-        end_char (str): The ending letter for artists to catalog (e.g., 'z').
-    Returns:
-        list[Artist]: A list of Artist objects.
-    """
-
     log.info("Starting to build artists catalog...")
     artists = []
     for char_code in range(ord(start_char), ord(end_char) + 1):
@@ -72,26 +52,10 @@ def get_artists(start_char: str, end_char: str) -> list[Artist]:
     return artists
 
 
-def get_catalog(
-    output_directory: Path,
-    start_char: str = "a",
-    end_char: str = "z",
-) -> dict:
-    """
-    Generates a catalog of artists and their songs from lacuerda.net.
-    This function does NOT download lyrics, only metadata.
-    Args:
-        output_directory (Path): The base directory where lyrics would eventually be saved.
-                                 Used to construct potential output_path for each song.
-        start_char (str): The starting letter for artists to catalog (e.g., 'a').
-        end_char (str): The ending letter for artists to catalog (e.g., 'z').
-    Returns:
-        dict: A dictionary with artist names as keys and lists of their Song objects as values.
-    """
+def get_catalog(output_directory: Path, start_char: str = "a", end_char: str = "z") -> dict:
     start_char = start_char.lower()
     end_char = end_char.lower()
 
-    # Get all artists
     catalog = get_artists(start_char, end_char)
 
     for artist in catalog:
@@ -101,38 +65,25 @@ def get_catalog(
             continue
 
         for a_tag in soup.select("li > a"):
-            # Filter for valid song links. lacuerda.net song links are relative
-            # to the artist page and do not typically contain '.shtml' in the <a> href itself
-            # for the first part of the relative path, but they *do* eventually form
-            # artist/song.shtml. The original code looked for 'id="r"' which is too specific.
-            # We'll assume any relative href on an artist page is a potential song link.
             if a_tag and a_tag.get("href") and not a_tag["href"].startswith("http"):
-
                 song_relative_path = a_tag["href"]
 
-                # Construct the full base URL for the song (before adding .shtml or version)
-                # Example: https://acordes.lacuerda.net/artist/song_title
-                # We need to ensure artist_url ends with a '/' if song_relative_path doesn't start with one,
-                # or remove it if song_relative_path starts with one.
-                if not artist.url.endswith("/") and not song_relative_path.startswith(
-                    "/"
-                ):
+                if not artist.url.endswith("/") and not song_relative_path.startswith("/"):
                     song_base_url_prefix = f"{artist.url}/"
                 else:
                     song_base_url_prefix = artist.url
 
                 url = f"{song_base_url_prefix}{song_relative_path}.shtml"
                 full_song_url, song_filename = get_version(url, SONG_VERSION)
-                song_title = (
-                    Path(song_relative_path).stem.replace("_", " ").title()
-                )  # The song title can be derived from the 'stem' of the relative path
+
+                song_title = Path(song_relative_path).stem.replace("_", " ").title()
                 song_output_dir = f"{output_directory}songs/{artist.name.replace(' ', '_').lower()}/{song_filename}"
 
                 artist.songs.append(
                     Song(
                         song_title=song_title,
                         song_url=full_song_url,
-                        genre="",  # Cannot be scraped directly from lacuerda.net
+                        genre="",
                         lyrics_path=song_output_dir,
                     )
                 )
@@ -142,14 +93,7 @@ def get_catalog(
 
 
 def get_song_lyrics(song_name: str, song_url: str, song_file_path: str) -> str:
-    """Fetches the lyrics of a song from its URL.
-    Args:
-        song_url (str): The URL of the song page.
-    Returns:
-        str: The lyrics text, or an empty string if not found.
-    """
     try:
-
         song_file_path = files.normalize_relative_path(song_file_path)
 
         if files.check_file_exists(song_file_path):
@@ -165,10 +109,8 @@ def get_song_lyrics(song_name: str, song_url: str, song_file_path: str) -> str:
             return False
 
         for p in lyric:
-
             text = re.sub("<.*?>", "", str(p)).strip()
             if text:
-
                 files.write_string_to_file(song_file_path, text=text)
                 print(song_name, "downloaded!")
                 return True
@@ -178,72 +120,40 @@ def get_song_lyrics(song_name: str, song_url: str, song_file_path: str) -> str:
         raise e
 
 
+# ----------------------------------------------------------
+# NEW get_songs() — the version required for the exercise
+# ----------------------------------------------------------
+
 def get_songs(output_directory: str, version: int = 0):
-    """Downloads song lyrics from lacuerda.net based on the provided version.
-    Args:
-        output_directory (str): The base directory where lyrics will be saved.
-        version (int, optional): The version number of the song to download. Defaults to 0.
     """
-    # TODO: Refactor this code to use get_catalog and Song/Artist dataclasses.
-    # This function currently duplicates a lot of the logic in get_catalog.
-    # It should ideally take a catalog of Song objects and download lyrics for each.
-    # This would separate concerns and make the code cleaner.
-    #
-    # Steps:
-    # 1. Get the list of artists from the Catalog. So, the INDEX variable is not needed anymore.
-    # 2. For each artist, get their songs
-    # 3. For each song, check if the lyrics file already exists
-    # 4. If not, fetch the lyrics and save to the appropriate path
+    Usa catalog.json para descargar las canciones.
+    No vuelve a scrapear la web.
+    """
 
-    # -------------------- OLD CODE --------------------#
-    output_directory = output_directory + "songs/"
-    for i in INDEX:
+    catalog_path = Path(output_directory) / "catalogs" / "catalog.json"
+    catalog_data = files.load_from_json(catalog_path)
 
-        artist_index_url = URL_ARTIST_INDEX + "/" + i
+    if not catalog_data:
+        log.error("No catalog found. Run get_catalog() first.")
+        return
 
-        lis = bs.get_soup(artist_index_url).find("ul").findAll("li")
+    for artist in catalog_data:   # aquí tu JSON encaja perfecto
+        artist_name = artist["name"]
+        log.info(f"Downloading songs for artist: {artist_name}")
 
-        artists_urls = []
-        for li in lis:
-            href = ROOT + li.find("a")["href"]
-            if href is not None:
-                artists_urls.append(href)
+        for song in artist["songs"]:
+            song_name = song["song_title"]
+            song_url = song["song_url"]
+            lyrics_path = song["lyrics_path"]
 
-        for url in artists_urls:
-            artist = str(url).replace(ROOT, "").replace("/", "")
-            artist_dir = output_directory + f"/{i}/{artist}"
-            log.info("artist--> %s - url --> %s", artist, url)
+            # aplicar versión si hace falta (0 = original)
+            song_url_versioned, _ = get_version(song_url, version)
 
-            lis = bs.get_soup(url).findAll("li")
+            try:
+                if get_song_lyrics(song_name, song_url_versioned, lyrics_path):
+                    time.sleep(0.5)
+            except Exception as e:
+                log.error(f"Error downloading {song_name}: {e}")
+                continue
 
-            song_urls = []
-
-            for li in lis:
-                if 'id="r' in str(li):
-                    href = url + li.find("a")["href"] + ".shtml"
-                    if href is not None:
-                        song_urls.append(href)
-
-            for song_url in song_urls:
-
-                song_url, song_name = get_version(song_url, version)
-                song_file_path = f"{artist_dir}/{song_name}"
-
-                try:
-                    if get_song_lyrics(song_name, song_url, song_file_path):
-                        time.sleep(0.5)  # Be polite and avoid hammering the server
-                    else:
-                        log.info(
-                            f"Skipping download for existing file: {song_file_path}"
-                        )
-                        continue
-                except Exception as e:
-                    log.error(f"Error fetching song from {song_url}: {e}")
-                    continue
-    # -------------------- OLD CODE --------------------#
-    # -------------------- NEW CODE --------------------#
-    # catalog = files.load_from_json(path=f"{output_directory}catalog.json")
-    # for artist in catalog:
-    #     for song in artist.songs:
-    #       ... your code here ...
-    # -------------------- NEW CODE --------------------#
+    log.info("Song download process complete.")

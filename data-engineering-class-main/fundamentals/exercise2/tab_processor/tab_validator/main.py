@@ -1,119 +1,81 @@
-# Importamos las bibliotecas necesarias
 import os
 import click
 import re
 import logging as log
 import datetime
 import shutil
+from pathlib import Path
 
-INPUT_DIRECTORY = "./files/"
-CLEANED_DIRECTORY = f"{INPUT_DIRECTORY}cleaned"
-OUTPUT_DIRECTORY_OK = f"{INPUT_DIRECTORY}validations/ok"
-OUTPUT_DIRECTORY_KO = f"{INPUT_DIRECTORY}validations/ko"
-ROOT = "https://acordes.lacuerda.net"
-URL_ARTIST_INDEX = "https://acordes.lacuerda.net/tabs/"
-SONG_VERSION = 0
-INDEX = "abcdefghijklmnopqrstuvwxyz#"
+# --- Directories ---
+FILES = Path("files")
+CLEANED = FILES / "cleaned"
+VALID_OK = FILES / "validations" / "ok"
+VALID_KO = FILES / "validations" / "ko"
 
 
-dir_list = list()
-output_file = str()
-dir = str()
-file_name = str()
-
-
-def validate_song_format(song):
-    """Validates if the song follows a basic expected format."""
-    # Regex pattern for song format
-    pattern = r"((?:[A-Z]+\s+)*\n.+)+"
-
-    # Check if the song matches the pattern
-    match = re.fullmatch(pattern, song, flags=re.DOTALL)
-
-    # If there is a match, the song is in the correct format
-    if match:
+# --- Validation rules ---
+def validate_song(text: str) -> bool:
+    """Flexible validation: at least 2 lines OR contains chords."""
+    if text.count("\n") >= 2:
         return True
-    else:
-        return False
+
+    chord_pattern = r"\b([A-G](#|b)?m?(aj)?7?)\b"
+    if re.search(chord_pattern, text, flags=re.IGNORECASE):
+        return True
+
+    return False
 
 
-def list_files_recursive(path: str = "."):
-    """Lists all files in a directory recursively."""
-    for entry in os.listdir(path):
-        full_path = os.path.join(path, entry)
-        if os.path.isdir(full_path):
-            list_files_recursive(full_path)
-        else:
-            dir_list.append(full_path)
-
-    return dir_list
+# --- File listing ---
+def get_cleaned_files():
+    """Yield all txt files under cleaned/, recursively."""
+    return CLEANED.rglob("*.txt")
 
 
 @click.command()
-@click.option(
-    "--init",
-    "-i",
-    is_flag=True,
-    default=False,
-    help=(
-        "If flag is present, drops all files and validates from the clean directory. "
-    ),
-)
+@click.option("--init", "-i", is_flag=True, default=False)
 def main(init):
-    # Start time tracking
-    start_time = datetime.datetime.now()
-    log.info(f"Validator started at {start_time}")
+
     print("Starting validator...")
 
     if init:
-        if os.path.exists(OUTPUT_DIRECTORY_OK):
-            shutil.rmtree(OUTPUT_DIRECTORY_OK)
-        if os.path.exists(OUTPUT_DIRECTORY_KO):
-            shutil.rmtree(OUTPUT_DIRECTORY_KO)
-        log.info("Directories Removed")
+        shutil.rmtree(VALID_OK, ignore_errors=True)
+        shutil.rmtree(VALID_KO, ignore_errors=True)
+        print("Previous validations removed.")
 
-    OK = 0
-    KO = 0
+    ok = ko = 0
 
-    for file_path in list_files_recursive(CLEANED_DIRECTORY):
+    for path in get_cleaned_files():
 
-        text = str()
-        with open(file_path, "r") as file:
-            text = file.read()
+        text = path.read_text(encoding="utf-8", errors="ignore")
 
-        # Formatting of the text goes in that function call
-        validated = validate_song_format(text)
+        # Compute relative path
+        rel = path.relative_to(CLEANED)
 
-        if validated:
+        # Remove "songs/" prefix if it exists
+        parts = rel.parts
+        if parts[0].lower() == "songs":
+            rel = Path(*parts[1:])
 
-            output_file = file_path.replace(CLEANED_DIRECTORY, OUTPUT_DIRECTORY_OK)
-            dir = "/".join(output_file.split("/")[:-1])
-            file_name = output_file.split("/")[-1:]
-            OK += 1
+        # Compute destination
+        if validate_song(text):
+            dest = VALID_OK / rel
+            ok += 1
         else:
+            dest = VALID_KO / rel
+            ko += 1
 
-            output_file = file_path.replace(CLEANED_DIRECTORY, OUTPUT_DIRECTORY_KO)
-            dir = "/".join(output_file.split("/")[:-1])
-            file_name = output_file.split("/")[-1:]
-            KO += 1
+        # Ensure parent folder exists
+        dest.parent.mkdir(parents=True, exist_ok=True)
 
-        # Creates the path if not exists
-        if not os.path.exists(dir):
-            os.makedirs(dir, exist_ok=True)
-            print("OKs = ", OK, "-- KOs = ", KO, "--", dir, " CREATED!!")
+        # Save file
+        dest.write_text(text, encoding="utf-8")
 
-        with open(output_file, "w") as file:
-            file.write(text)
-            print("OKs = ", OK, "-- KOs = ", KO, "--", file_name, " CREATED!!")
+        print(f"OK={ok}  KO={ko}  → {rel}")
 
-    log.info(f"OKs = {OK}, -- KOs = {KO}, --")
-    end_time = datetime.datetime.now()
-    log.info(f"Validator ended at {end_time}")
-    duration = end_time - start_time
-    log.info(f"Total duration: {duration}")
-    print(
-        f"Validator finished. Duration in seconds: {duration.total_seconds()}, that is {duration.total_seconds() / 60} minutes."
-    )
+    print("\nValidator finished.")
+    print(f"TOTAL OK = {ok}")
+    print(f"TOTAL KO = {ko}")
 
 
 if __name__ == "__main__":

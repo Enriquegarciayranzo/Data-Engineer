@@ -1,29 +1,22 @@
-# Importamos las bibliotecas necesarias
 import os
 import re
 import logging as log
 import datetime
+from pathlib import Path
 from utils.string_mapping import MAPPING
 
-# -- Configuration ---
-INPUT_DIRECTORY = "./files/"
-CATALOG_DIRECTORY = f"{INPUT_DIRECTORY}catalogs/"
-LOGS_DIRECTORY = "./logs/"
-
-OUTPUT_DIRECTORY = f"{INPUT_DIRECTORY}cleaned/"
-ROOT = "https://acordes.lacuerda.net"
-URL_ARTIST_INDEX = "https://acordes.lacuerda.net/tabs/"
+# --- Configuration ---
+INPUT_DIRECTORY = Path("./files/")
+OUTPUT_DIRECTORY = INPUT_DIRECTORY / "cleaned/"
+LOGS_DIRECTORY = Path("./logs/")
 MIN_LINES = 5
-SONG_VERSION = 0
-INDEX = "abcdefghijklmnopqrstuvwxyz#"
 
-dir_list = list()
+dir_list = []
 
-# --- Logging config---
-logger = log.getLogger(__name__)
 
+# --- Logging config ---
 log.basicConfig(
-    filename=f"{LOGS_DIRECTORY}cleaner.log",
+    filename=LOGS_DIRECTORY / "cleaner.log",
     filemode="w",
     encoding="utf-8",
     format="%(asctime)s %(levelname)-8s %(message)s",
@@ -31,83 +24,83 @@ log.basicConfig(
     level=log.INFO,
 )
 
-# --- Logic---
 
+# --- File discovery ---
+def list_files_recursive(path: Path):
+    for entry in path.iterdir():
+        if entry.is_dir():
 
-def list_files_recursive(path="."):
+            # No entrar en catalogs ni en cleaned
+            if entry.name in ("catalogs", "cleaned"):
+                continue
 
-    for entry in os.listdir(path):
-        full_path = os.path.join(path, entry)
-        if os.path.isdir(full_path):
-            list_files_recursive(full_path)
+            list_files_recursive(entry)
+
         else:
-            dir_list.append(full_path)
+            if entry.suffix.lower() != ".txt":
+                continue
+            dir_list.append(entry)
 
     return dir_list
 
 
+# --- Cleaning helpers ---
 def remove_email_sentences(text: str):
-
     email_pattern = r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b"
     sentence_pattern = r"[\n^.!?]*" + email_pattern + r"[^.!?]*[.!?\n]"
-
     return re.sub(sentence_pattern, "", text)
 
 
 def apply_format_rules(text: str):
-    formatted_text = str
-
-    formatted_text = remove_email_sentences(text)
-
+    formatted = remove_email_sentences(text)
     for key, value in MAPPING.items():
-        formatted_text = re.sub(
-            key, value, formatted_text, flags=re.DOTALL & re.IGNORECASE
-        )
-    return formatted_text
+        formatted = re.sub(key, value, formatted, flags=re.DOTALL | re.IGNORECASE)
+    return formatted
 
 
+# --- Main cleaner ---
 def main():
-
-    # Start time tracking
     start_time = datetime.datetime.now()
-    log.info(f"Cleaner started at {start_time}")
     print("Starting cleaner...")
 
     cleaned = 0
+    files_to_process = list_files_recursive(INPUT_DIRECTORY)
 
-    for file_path in list_files_recursive(INPUT_DIRECTORY):
-        log.info(f"Processing files... -> {file_path}")
-        text = str()
-        with open(file_path, "r") as file:
-            text = file.read()
-        if text.count("\n") < MIN_LINES:
-            log.info("Empty or too small tab. Skipping.............................")
+    for file_path in files_to_process:
+        if not file_path.exists():
+            print("MISSING →", file_path)
             continue
-        # Formatting of the text goes in that function call
 
-        formatted_text = apply_format_rules(text)
+        text = file_path.read_text(encoding="utf-8", errors="ignore")
 
-        output_file = file_path.replace(INPUT_DIRECTORY, OUTPUT_DIRECTORY)
-        dir = "/".join(output_file.split("/")[:-1])
-        file_name = output_file.split("/")[-1:]
+        if text.count("\n") < MIN_LINES:
+            continue
 
-        # Creates the path if not exists
-        if not os.path.exists(dir):
-            os.makedirs(dir, exist_ok=True)
-            print("INFO", dir, " CREATED!!")
+        formatted = apply_format_rules(text)
+
+        # build normalized relative path
+        relative = file_path.relative_to(INPUT_DIRECTORY)
+        relative = Path(str(relative).lower())
+
+        # --- FIX: evitar rutas duplicadas cleaned/cleaned ---
+        if str(relative).startswith("cleaned/"):
+            relative = Path(str(relative)[8:])
+        # ----------------------------------------------------
+
+        output_path = OUTPUT_DIRECTORY / relative
+
+        # create the path if needed
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+
+        # save cleaned file
+        output_path.write_text(formatted, encoding="utf-8")
 
         cleaned += 1
-        with open(output_file, "w") as file:
-            file.write(formatted_text)
-            print(cleaned, "--", file_name, " CREATED!!")
+        print(f"{cleaned} -- {output_path.name} CREATED!!")
 
-    end_time = datetime.datetime.now()
-    log.info(f"Cleaner ended at {end_time}")
-    duration = end_time - start_time
-    log.info(f"Total duration: {duration}")
-    print(
-        f"Cleaner finished. Duration in seconds: {duration.total_seconds()}, that is {duration.total_seconds() / 60} minutes."
-    )
+    end = datetime.datetime.now()
+    duration = end - start_time
+    print(f"Cleaner finished in {duration.total_seconds()} seconds.")
 
 
 if __name__ == "__main__":
