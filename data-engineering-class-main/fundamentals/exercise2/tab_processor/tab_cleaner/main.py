@@ -100,7 +100,7 @@ def main():
 
     end = datetime.datetime.now()
     duration = end - start_time
-    print(f"Cleaner finished in {duration.total_seconds()} seconds.")
+    print(f"Cleaner finished in {duration.total_seconds()} seconds")
 
 
 if __name__ == "__main__":
