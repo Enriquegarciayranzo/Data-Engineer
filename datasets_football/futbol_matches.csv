@@ -1,0 +1,110 @@
+match_id,season,league,date,stadium,home_team,away_team,home_goals,away_goals,home_shots,away_shots,home_xG,away_xG,home_possession_pct,away_possession_pct,attendance,referee
+M0059,2024-25,LaLiga,2024-08-16,Abanca Balaidos,RC Celta,Sevilla FC,2,3,22,12,1.85,3.12,62,38,23337,De Burgos Bengoetxea
+M0173,2024-25,LaLiga,2024-08-17,Montjuic,FC Barcelona,Villarreal CF,2,0,14,9,2.94,0.89,63,37,14128,Del Cerro Grande
+M0209,2024-25,LaLiga,2024-08-18,Abanca Balaidos,RC Celta,Real Zaragoza,0,2,17,14,0.34,1.48,51,49,40498,Martinez Munuera
+M0029,2024-25,LaLiga,2024-08-18,Abanca Balaidos,RC Celta,Osasuna,3,0,12,13,2.89,0.77,49,51,34831,Marti要ez Munuera
+M0228,2024-25,LaLiga,2024-08-19,Civitas Metropolitano,Atletico de Madrid,Real Madrid,1,3,9,8,2.2,4.0,39,61,34637,Gil Manzano
+M0115,2024-25,LaLiga,2024-08-21,Santiago Bernabeu,Real Madrid,Villarreal CF,2,1,7,11,2.58,1.45,50,50,26961,Martinez Munuera
+M0149,2024-25,LaLiga,2024-08-21,La Romareda,Real Zaragoza,Real Madrid,1,2,11,7,0.1,2.73,59,41,25749,Martinez Munuera
+M0063,2024-25,LaLiga,2024-08-22,Estadio de la Ceramica,Villarreal CF,Valencia CF,0,0,6,6,0.1,1.25,61,39,38172,Gil Manzano
+M0003,2024-25,LaLiga,2024-08-24,Civitas Metropolitano,Atletico de Madrid,FC Barcelona,0,1,9,8,0.1,2.31,51,49,19538,De Burgos Bengoetxea
+M0113,2024-25,LaLiga,2024-08-27,Benito Villamarin,Real Betis,FC Barcelona,0,2,5,11,0.19,2.53,54,46,38913,Martinez Munuera
+M0164,2024-25,LaLiga,2024-08-28,La Romareda,Real Zaragoza,Athletic Club,1,2,4,8,0.24,2.67,62,38,21088,Mateu Lahoz
+M0222,2024-25,LaLiga,2024-08-29,Civitas Metropolitano,Atletico de Madrid,Sevilla FC,0,1,5,8,0.73,1.55,57,43,28398,Gil Manzano
+M0193,2024-25,LaLiga,2024-08-30,La Romareda,Real Zaragoza,Sevilla FC,2,0,9,13,1.1,0.18,55,45,20420,Del Cerro Grande
+M0181,2024-25,LaLiga,2024-08-31,El Sadar,Osasuna,RC Celta,1,1,14,12,0.12,0.87,44,56,23033,Mateu Lahoz
+M0079,2024-25,LaLiga,2024-08-31,Civitas Metropolitano,Atletico de Madrid,Real Zaragoza,0,3,9,7,0.1,2.87,45,55,37512,Martinez Munuera
+M0203,2024-25,LaLiga,2024-08-31,Civitas Metropolitano,Atletico de Madrid,FC Barcelona,1,3,5,6,1.14,2.21,50,50,41291,Martinez Munuera
+M0205,2024-25,LaLiga,2024-09-01,Estadio de la Ceramica,Villarreal CF,Real Madrid,2,0,14,9,2.04,0.1,55,45,32959,Gil Manzano
+M0124,2024-25,LaLiga,2024-09-03,Reale Arena,Real Sociedad,FC Barcelona,0,3,9,12,0.1,3.24,48,52,20061,De Burgos Bengoetxea
+M0061,2024-25,LaLiga,2024-09-03,Montjuic,FC Barcelona,Valencia CF,1,1,19,14,1.04,0.54,70,30,28473,Mateu Lahoz
+M0246,2024-25,LaLiga,2024-09-03,Montjuic,FC Barcelona,Athletic Club,1,2,8,9,1.94,1.93,51,49,28464,Mateu Lahoz
+M0086,2024-25,LaLiga (synthetic),2024-09-03,San Mam矇s,Athletic Club,Atl矇tico de Madrid,0,3,14,10,0.1,3.32,62,38,19787,Gil Manzano
+M0132,2024-25,LaLiga,2024-09-04,Montjuic,FC Barcelona,Athletic Club,3,1,12,16,3.06,1.25,54,46,24361,Soto Grado
+M0206,2024-25,LaLiga,2024-09-06,Reale Arena,Real Sociedad,RC Celta,0,0,8,18,0.1,0.31,70,30,28054,Soto Grado
+M0157,2024-25,LaLiga,2024-09-06,Benito Villamarin,Real Betis,Real Sociedad,4,3,11,13,4.5,4.5,57,43,30606,Soto Grado
+M0218,2024-25,LaLiga,2024-09-06,San Mames,Athletic Club,FC Barcelona,1,1,15,8,0.84,2.05,69,31,35830,De Burgos Bengoetxea
+M0156,2024-25,LaLiga,2024-09-08,Abanca Balaidos,RC Celta,Real Madrid,2,2,10,8,1.63,2.45,70,30,19459,Del Cerro Grande
+M0032,2024-25,LaLiga,2024-09-08,San Mames,Athletic Club,Real Sociedad,0,1,14,13,0.89,0.91,45,55,38880,Del Cerro Grande
+M0195,2024-25,LaLiga,2024-09-09,Estadio de la Ceramica,Villarreal CF,RC Celta,1,1,13,10,1.71,1.12,55,45,27174,Del Cerro Grande
+M0014,2024-25,LaLiga,2024-09-10,Ramon Sanchez-Pizjuan,Sevilla FC,FC Barcelona,3,1,15,5,3.34,1.98,35,65,29477,Mateu Lahoz
+M0016,2024-25,LaLiga,2024-09-11,Reale Arena,Real Sociedad,Real Madrid,1,1,16,6,1.78,1.45,60,40,43174,Del Cerro Grande
+M0210,2024-25,LaLiga,2024-09-11,Reale Arena,Real Sociedad,Atletico de Madrid,0,1,14,4,0.1,0.55,56,44,33712,Mateu Lahoz
+M0031,2024-25,LaLiga,2024-09-13,Benito Villamarin,Real Betis,Atletico de Madrid,2,1,3,17,2.01,1.68,58,42,38863,Mateu Lahoz
+M0194,2024-25,LaLiga,2024-09-13,Civitas Metropolitano,Atletico de Madrid,Real Sociedad,1,0,9,10,1.77,0.1,43,57,37004,Soto Grado
+M0106,2024-25,LaLiga,2024-09-14,El Sadar,Osasuna,Real Betis,4,2,16,14,4.5,1.51,68,32,18829,De Burgos Bengoetxea
+M0196,2024-25,LaLiga,2024-09-14,San Mames,Athletic Club,Osasuna,2,2,14,6,2.31,2.24,41,59,36467,Gil Manzano
+M0162,2024-25,LaLiga,2024-09-15,El Sadar,Osasuna,Atletico de Madrid,1,3,5,3,1.28,3.86,54,46,27492,Del Cerro Grande
+M0129,2024-25,LaLiga,2024-09-15,Civitas Metropolitano,Atletico de Madrid,Real Betis,3,1,9,11,2.31,1.31,51,49,32634,Del Cerro Grande
+M0199,2024-25,LaLiga,2024-09-16,Santiago Bernabeu,Real Madrid,Sevilla FC,1,1,8,12,1.0,1.56,46,54,26697,Soto Grado
+M0005,2024-25,LaLiga,2024-09-17,Benito Villamari要,Real Betis,Real Madrid,2,1,14,13,2.74,1.65,49,51,23012,Soto Grado
+M0027,2024-25,LaLiga,2024-09-18,Mestalla,Valencia CF,Osasuna,2,3,13,7,2.08,2.9,46,54,34796,Mateu Lahoz
+M0172,2024-25,LaLiga,2024-09-18,La Romareda,Real Zaragoza,Real Madrid,3,1,18,13,3.04,0.67,30,70,22246,Del Cerro Grande
+M0006,2024-25,LaLiga,2024-09-18,Reale Arena,Real Sociedad,Real Zaragoza,2,0,7,5,2.69,1.01,51,49,36028,Marti要ez Munuera
+M0201,2024-25,LaLiga,2024-09-20,Mestalla,Valencia CF,Real Madrid,0,2,7,14,0.63,2.63,56,44,28156,Mateu Lahoz
+M0021,2024-25,LaLiga,2024-09-20,Estadio de la Ceramica,Villarreal CF,Valencia CF,1,1,21,3,1.61,0.23,47,53,36711,Soto Grado
+M0135,2024-25,LaLiga,2024-09-21,Abanca Balaidos,RC Celta,Real Betis,2,2,12,11,3.12,2.5,57,43,36580,Del Cerro Grande
+M0093,2024-25,LaLiga,2024-09-22,Mestalla,Valencia CF,Real Madrid,0,0,8,10,0.1,0.15,50,50,22144,Mateu Lahoz
+M0039,2024-25,LaLiga,2024-09-22,San Mames,Athletic Club,Real Sociedad,0,2,16,10,1.44,3.25,49,51,35772,De Burgos Bengoetxea
+M0249,2024-25,LaLiga,2024-09-24,Mestalla,Valencia CF,Osasuna,0,3,13,15,0.62,3.67,52,48,39283,Gil Manzano
+M0104,2024-25,LaLiga,2024-09-24,Reale Arena,Real Sociedad,Sevilla FC,0,0,15,11,0.8,0.1,70,30,26883,Gil Manzano
+M0067,2024-25,LaLiga,2024-09-24,Santiago Bernabeu,Real Madrid,Athletic Club,1,3,10,9,1.38,2.17,38,62,33946,Marti要ez Munuera
+M0052,2024-25,LaLiga,2024-09-24,La Romareda,Real Zaragoza,RC Celta,1,1,13,7,1.25,1.11,63,37,30035,De Burgos Bengoetxea
+M0055,2024-25,LaLiga,2024-09-27,Santiago Bernabeu,Real Madrid,Sevilla FC,1,2,13,8,1.58,3.56,53,47,29985,Gil Manzano
+M0056,2024-25,LaLiga,2024-09-27,Montjuic,FC Barcelona,Athletic Club,1,1,18,11,0.99,1.7,64,36,24442,Marti要ez Munuera
+M0058,2024-25,LaLiga,2024-09-28,Montjic,FC Barcelona,Real Betis,2,1,11,10,3.27,1.55,54,46,31536,Martinez Munuera
+M0240,2024-25,LaLiga,2024-09-30,Abanca Balaidos,RC Celta,Osasuna,3,0,8,12,2.58,0.65,53,47,41957,Gil Manzano
+M0179,2024-25,LaLiga,2024-09-30,La Romareda,Real Zaragoza,Real Sociedad,0,1,14,10,0.1,1.13,51,49,25039,Martinez Munuera
+M0042,2024-25,LaLiga,2024-10-03,Benito Villamarin,Real Betis,Osasuna,1,0,7,11,1.65,0.1,70,30,25445,Del Cerro Grande
+M0133,2024-25,LaLiga,2024-10-04,El Sadar,Osasuna,Sevilla FC,0,0,6,6,0.92,0.1,41,59,32293,Soto Grado
+M0060,2024-25,LaLiga,2024-10-04,Benito Villamarin,Real Betis,Villarreal CF,1,2,17,6,0.3,2.04,40,60,26807,Mateu Lahoz
+M0013,2024-25,LaLiga,2024-10-04,El Sadar,Osasuna,Real Sociedad,1,0,18,13,1.21,0.1,58,42,18217,Del Cerro Grande
+M0098,2024-25,LaLiga,2024-10-05,Benito Villamarin,Real Betis,Real Madrid,1,2,17,15,0.82,2.44,56,44,30085,Martinez Munuera
+M0105,2024-25,LaLiga,2024-10-05,Ramon Sanchez-Pizjuan,Sevilla FC,Real Sociedad,0,0,8,12,0.37,0.1,62,38,26688,De Burgos Bengoetxea
+M0230,2024-25,LaLiga,2024-10-08,San Mames,Athletic Club,Real Sociedad,3,0,5,12,3.54,0.16,63,37,25327,Martinez Munuera
+M0220,2024-25,LaLiga,2024-10-10,Civitas Metropolitano,Atletico de Madrid,RC Celta,1,4,12,11,1.6,4.45,60,40,23061,Del Cerro Grande
+M0090,2024-25,LaLiga,2024-10-11,San Mames,Athletic Club,Real Zaragoza,2,5,12,12,2.15,4.5,45,55,42407,De Burgos Bengoetxea
+M0233,2024-25,LaLiga,2024-10-11,Reale Arena,Real Sociedad,Athletic Club,0,2,9,10,0.5,2.48,52,48,33941,Martinez Munuera
+M0229,2024-25,LaLiga,2024-10-12,Reale Arena,Real Sociedad,Valencia CF,1,2,7,6,1.81,2.36,57,43,30724,Soto Grado
+M0119,2024-25,LaLiga,2024-10-12,Estadio de la Ceramica,Villarreal CF,Real Madrid,1,3,9,9,1.53,3.25,57,43,20634,Gil Manzano
+M0068,2024-25,LaLiga,2024-10-13,Benito Villamarin,Real Betis,FC Barcelona,3,0,12,6,3.44,0.1,62,38,31780,Mateu Lahoz
+M0102,2024-25,LaLiga,2024-10-13,Civitas Metropolitano,Atletico de Madrid,Real Sociedad,0,0,10,18,0.43,0.46,62,38,29910,Martinez Munuera
+M0153,2024-25,LaLiga,2024-10-13,Montjuic,FC Barcelona,Real Zaragoza,1,2,9,6,0.91,1.63,53,47,40997,Del Cerro Grande
+M0212,2024-25,LaLiga,2024-10-17,La Romareda,Real Zaragoza,Real Betis,4,1,4,13,3.47,1.64,52,48,20368,Mateu Lahoz
+M0247,2024-25,LaLiga,2024-10-17,La Romareda,Real Zaragoza,Sevilla FC,2,1,9,10,2.92,0.9,33,67,32957,Gil Manzano
+M0160,2024-25,LaLiga,2024-10-19,La Romareda,Real Zaragoza,FC Barcelona,2,2,7,14,1.92,2.32,54,46,25928,De Burgos Bengoetxea
+M0190,2024-25,LaLiga,2024-10-21,Reale Arena,Real Sociedad,RC Celta,0,2,12,6,0.6,2.76,35,65,21898,De Burgos Bengoetxea
+M0100,2024-25,LaLiga,2024-10-22,Santiago Bernabeu,Real Madrid,Atletico de Madrid,1,2,6,14,0.92,2.41,51,49,31816,Mateu Lahoz
+M0207,2024-25,LaLiga,2024-10-23,Civitas Metropolitano,Atletico de Madrid,Real Sociedad,1,1,9,9,1.08,0.46,56,44,30968,Gil Manzano
+M0241,2024-25,LaLiga,2024-10-24,El Sadar,Osasuna,FC Barcelona,0,0,9,4,0.1,0.1,70,30,31463,Gil Manzano
+M0064,2024-25,LaLiga,2024-10-24,La Romareda,Real Zaragoza,Real Madrid,0,0,12,9,0.5,0.1,48,52,26166,Del Cerro Grande
+M0232,2024-25,LaLiga,2024-10-25,Estadio de la Ceramica,Villarreal CF,Real Zaragoza,1,2,15,6,1.42,2.54,45,55,21035,Soto Grado
+M0007,2024-25,LaLiga,2024-10-26,Santiago Bernabeu,Real Madrid,Atletico de Madrid,3,1,10,9,2.35,1.83,61,39,28152,Mateu Lahoz
+M0223,2024-25,LaLiga,2024-10-26,Santiago Bernabeu,Real Madrid,Sevilla FC,3,2,10,6,3.62,1.96,62,38,32936,Mateu Lahoz
+M0111,2024-25,LaLiga,2024-10-28,Mestalla,Valencia CF,Real Zaragoza,1,0,10,11,1.09,0.53,51,49,20397,Martinez Munuera
+M0081,2024-25,LaLiga,2024-10-29,Civitas Metropolitano,Atletico de Madrid,Real Madrid,1,1,14,14,0.69,1.26,34,66,17941,Martinez Munuera
+M0004,2024-25,LaLiga,2024-11-01,Santiago Bernabeu,Real Madrid,RC Celta,1,1,23,14,1.33,1.73,41,59,15333,De Burgos Bengoetxea
+M0187,2024-25,LaLiga,2024-11-03,Mestalla,Valencia CF,Real Sociedad,0,1,15,14,0.1,0.75,63,37,23747,De Burgos Bengoetxea
+M0049,2024-25,LaLiga,2024-11-03,Estadio de la Ceramica,Villarreal CF,Real Madrid,1,3,9,7,1.52,3.32,70,30,40956,Gil Manzano
+M0163,2024-25,LaLiga,2024-11-04,Montjuic,FC Barcelona,Real Madrid,1,2,10,13,1.32,2.39,60,40,23785,Gil Manzano
+M0136,2024-25,LaLiga,2024-11-05,Abanca Balados,RC Celta,Real Madrid,2,1,20,5,2.07,1.03,55,45,34525,Mateu Lahoz
+M0237,2024-25,LaLiga,2024-11-06,Civitas Metropolitano,Atletico de Madrid,Athletic Club,1,0,14,5,1.28,0.3,45,55,30639,Mateu Lahoz
+M0146,2024-25,LaLiga,2024-11-09,Abanca Balaidos,RC Celta,Sevilla FC,2,2,19,16,1.91,1.53,53,47,13852,Mateu Lahoz
+M0217,2024-25,LaLiga,2024-11-10,Benito Villamarin,Real Betis,Real Sociedad,0,0,7,7,0.93,0.69,49,51,37068,Soto Grado
+M0171,2024-25,LaLiga,2024-11-12,Abanca Balaidos,RC Celta,Real Betis,1,0,6,3,1.7,0.1,59,41,40250,Del Cerro Grande
+M0118,2024-25,LaLiga,2024-11-16,Estadio de la Ceramica,Villarreal CF,Osasuna,0,1,9,12,0.82,1.27,56,44,44942,Martinez Munuera
+M0141,2024-25,LaLiga,2024-11-17,Abanca Balaidos,RC Celta,Osasuna,0,1,11,10,0.1,1.59,50,50,31356,Del Cerro Grande
+M0041,2024-25,LaLiga,2024-11-18,Montjuic,FC Barcelona,Atletico de Madrid,2,3,11,13,2.03,2.2,51,49,31224,De Burgos Bengoetxea
+M0214,2024-25,LaLiga,2024-11-18,San Mames,Athletic Club,RC Celta,1,3,11,16,0.33,3.19,39,61,30909,Soto Grado
+M0020,2024-25,LaLiga,2024-11-20,Benito Villamarin,Real Betis,Sevilla FC,1,4,17,10,2.0,4.5,54,46,29409,De Burgos Bengoetxea
+M0243,2024-25,LaLiga,2024-11-20,La Romareda,Real Zaragoza,Real Sociedad,0,1,13,13,0.1,1.25,42,58,30043,Soto Grado
+M0180,2024-25,LaLiga,2024-11-21,Benito Villamarin,Real Betis,Osasuna,0,2,11,10,0.34,2.74,36,64,16109,De Burgos Bengoetxea
+M0040,2024-25,LaLiga,2024-11-23,San Mames,Athletic Club,FC Barcelona,0,2,10,8,0.1,3.07,60,40,26903,Del Cerro Grande
+M0070,2024-25,LaLiga,2024-11-25,Montjuic,FC Barcelona,Sevilla FC,1,0,10,10,0.34,0.55,36,64,21612,Soto Grado
+M0035,2024-25,LaLiga,2024-11-25,Ci赳itas Metropolitano,Atletico de Madrid,Real Zaragoza,2,1,11,13,1.33,1.67,50,50,17159,Del Cerro Grande
+M0117,2024-25,LaLiga,2024-11-25,Santiago Bernabeu,Real Madrid,Villarreal CF,2,1,13,7,1.23,1.54,40,60,22309,Mateu Lahoz
+M0099,2024-25,LaLiga,2024-11-26,Abanca Balaidos,RC Celta,Real Betis,0,1,11,14,0.53,0.98,59,41,8000,Martinez Munuera
+M0038,2024-25,LaLiga,2024-11-26,Mestalla,Valencia CF,Atletico de Madrid,1,5,10,3,0.38,4.5,62,38,40330,De Burgos Bengoetxea
+M0047,2024-25,LaLiga,2024-11-27,Santiago Bernabeu,Real Madrid,FC Barcelona,3,0,21,14,2.94,1.15,48,52,22652,De Burgos Bengoetxea
+M0044,2024-25,LaLiga,2024-11-30,Estadio de la Ceramica,Villarreal CF,Real Sociedad,1,2,11,9,1.57,2.65,46,54,23393,Del Cerro Grande
+M0025,2024-25,LaLiga,2024-12-01,Reale Arena,Real Sociedad,Sevilla FC,0,1,10,5,1.18,0.34,47,53,29045,Gil Manzano
