@@ -1,251 +1,251 @@
 match_id,team,player_id,player_name,position,minutes,shots,goals,assists,passes,pass_accuracy_pct,tackles,interceptions,fouls_committed,card,rating
-M0059,RC Celta,P00001,Player_CEL_01,GK,64,0,0,1,14,76,1,2,0,None,5.51
-M0059,RC Celta,P00002,Player_CEL_02,DF,67,0,0,0,16,88,2,2,0,None,6.59
-M0059,RC Celta,P00003,Player_CEL_03,DF,85,1,0,0,26,67,1,0,1,Yellow,5.25
-M0059,RC Celta,P00004,Player_CEL_04,DF,65,0,0,0,52,75,2,0,1,None,7.21
-M0059,RC Celta,P00005,Player_CEL_05,DF,73,0,0,0,21,88,2,2,2,None,5.84
-M0059,RC Celta,P00006,Player_CEL_06,MF,65,3,1,0,47,78,1,1,0,None,6.65
-M0059,RC Celta,P00007,Player_CEL_07,MF,80,2,0,0,19,89,2,0,1,None,6.95
-M0059,RC Celta,P00008,Player_CEL_08,MF,86,4,0,1,32,78,2,1,2,None,7.15
-M0059,RC Celta,P00009,Player_CEL_09,FW,79,3,1,0,75,88,0,0,2,None,7.13
-M0059,RC Celta,P00010,Player_CEL_10,FW,62,4,0,0,49,81,0,2,1,None,6.61
-M0059,RC Celta,P00011,Player_CEL_11,FW,90,3,0,0,49,83,1,2,2,None,7.04
-M0059,RC Celta,P00012,Player_CEL_12,DF,44,0,0,0,20,64,2,1,0,None,5.43
-M0059,RC Celta,P00013,Player_CEL_13,MF,38,2,0,0,15,72,2,1,0,None,6.79
-M0059,Sevilla FC,P00014,Player_SEV_01,GK,82,1,1,0,18,91,0,0,2,None,5.55
-M0059,Sevilla FC,P00015,Player_SEV_02,DF,80,1,0,1,18,79,1,1,2,Yellow,7.39
-M0059,Sevilla FC,P00016,Player_SEV_03,DF,70,0,1,1,41,71,1,0,0,Yellow,7.64
-M0059,Sevilla FC,P00017,Player_SEV_04,DF,82,0,0,0,68,74,2,0,2,None,6.26
-M0059,Sevilla FC,P00018,Player_SEV_05,DF,67,1,0,0,61,85,1,1,0,None,6.55
-M0059,Sevilla FC,P00019,Player_SEV_06,MF,82,2,1,0,26,95,2,1,1,Yellow,6.28
-M0059,Sevilla FC,P00020,Player_SEV_07,MF,72,4,0,0,51,83,1,2,2,None,7.33
-M0059,Sevilla FC,P00021,Player_SEV_08,MF,81,3,0,0,43,73,3,2,1,None,6.5
-M0059,Sevilla FC,P00022,Player_SEV_09,FW,89,2,0,0,59,89,0,0,2,Yellow,6.25
-M0059,Sevilla FC,P00023,Player_SEV_10,FW,78,3,0,0,71,89,0,2,0,None,6.52
-M0059,Sevilla FC,P00024,Player_SEV_11,DF,21,0,0,0,21,76,0,1,1,None,5.88
-M0059,Sevilla FC,P00025,Player_SEV_12,FW,43,2,0,1,24,76,0,0,1,None,5.86
-M0173,FC Barcelona,P00026,Player_FCB_01,GK,84,1,1,0,12,86,1,1,2,None,5.85
-M0173,FC Barcelona,P00027,Player_FCB_02,DF,87,0,0,0,27,78,3,2,2,None,6.93
-M0173,FC Barcelona,P00028,Player_FCB_03,DF,83,0,0,1,16,86,1,1,0,None,7.29
-M0173,FC Barcelona,P00029,Player_FCB_04,DF,65,1,1,0,38,70,3,0,0,None,7.25
-M0173,FC Barcelona,P00030,Player_FCB_05,DF,82,0,0,1,71,74,2,1,0,None,7.39
-M0173,FC Barcelona,P00031,Player_FCB_06,MF,84,1,0,0,54,73,2,2,2,None,7.11
-M0173,FC Barcelona,P00032,Player_FCB_07,MF,72,0,0,0,23,61,3,1,2,None,8.09
-M0173,FC Barcelona,P00033,Player_FCB_08,MF,87,0,0,0,62,68,2,0,1,None,6.05
-M0173,FC Barcelona,P00034,Player_FCB_09,FW,67,4,0,0,20,97,0,2,1,None,7.84
-M0173,FC Barcelona,P00035,Player_FCB_10,FW,63,3,0,0,39,74,0,0,1,None,7.37
-M0173,FC Barcelona,P00036,Player_FCB_11,FW,62,3,0,0,36,93,0,1,0,None,8.01
-M0173,FC Barcelona,P00037,Player_FCB_12,FW,15,1,0,0,7,91,0,0,1,None,5.89
-M0173,FC Barcelona,P00038,Player_FCB_13,DF,34,0,0,0,13,81,2,0,1,None,5.33
-M0173,Villarreal CF,P00039,Player_VIL_01,GK,63,0,0,0,14,84,0,1,0,None,7.46
-M0173,Villarreal CF,P00040,Player_VIL_02,DF,60,0,0,0,31,72,0,2,1,Yellow,6.05
-M0173,Villarreal CF,P00041,Player_VIL_03,DF,67,1,0,0,73,85,2,1,1,None,7.3
-M0173,Villarreal CF,P00042,Player_VIL_04,DF,90,0,0,0,27,75,1,0,2,None,7.57
-M0173,Villarreal CF,P00043,Player_VIL_05,DF,80,1,0,0,69,70,0,1,2,None,7.06
-M0173,Villarreal CF,P00044,Player_VIL_06,MF,80,3,0,0,47,73,1,0,0,None,7.09
-M0173,Villarreal CF,P00045,Player_VIL_07,MF,73,0,0,0,22,73,0,1,1,None,6.22
-M0173,Villarreal CF,P00046,Player_VIL_08,MF,78,2,0,0,57,70,2,0,0,None,7.02
-M0173,Villarreal CF,P00047,Player_VIL_09,FW,67,1,0,0,51,76,1,0,2,None,7.7
-M0173,Villarreal CF,P00048,Player_VIL_10,FW,78,2,0,0,63,70,1,2,2,None,5.9
-M0173,Villarreal CF,P00049,Player_VIL_11,MF,26,1,0,0,28,85,2,0,1,Yellow,6.08
-M0173,Villarreal CF,P00050,Player_VIL_12,DF,13,0,0,0,30,75,1,1,1,None,6.85
-M0209,RC Celta,P00051,Player_CEL_01,GK,76,0,0,0,18,76,1,2,0,None,7.32
-M0209,RC Celta,P00052,Player_CEL_02,DF,69,1,0,0,54,84,3,1,1,Yellow,6.72
-M0209,RC Celta,P00053,Player_CEL_03,DF,71,0,0,0,30,73,0,0,0,None,7.36
-M0209,RC Celta,P00054,Player_CEL_04,DF,90,1,0,0,38,98,2,1,2,None,6.44
-M0209,RC Celta,P00055,Player_CEL_05,DF,62,1,0,0,72,90,0,2,1,None,6.62
-M0209,RC Celta,P00056,Player_CEL_06,MF,82,1,0,0,26,79,3,0,1,None,7.12
-M0209,RC Celta,P00057,Player_CEL_07,MF,84,1,0,0,17,75,1,1,0,None,5.38
-M0209,RC Celta,P00058,Player_CEL_08,MF,89,4,0,0,52,84,0,2,1,None,6.79
-M0209,RC Celta,P00059,Player_CEL_09,FW,84,4,0,0,19,78,1,2,2,None,6.61
-M0209,RC Celta,P00060,Player_CEL_10,FW,77,4,0,0,37,76,1,0,2,None,7.86
-M0209,RC Celta,P00061,Player_CEL_11,FW,70,4,0,0,19,76,1,0,0,None,6.53
-M0209,RC Celta,P00062,Player_CEL_12,FW,11,0,0,0,12,80,0,1,0,None,6.35
-M0209,RC Celta,P00063,Player_CEL_13,DF,35,0,0,0,31,83,0,1,1,None,7.61
-M0209,Real Zaragoza,P00064,Player_RZA_01,GK,89,0,0,0,19,80,0,0,2,None,6.27
-M0209,Real Zaragoza,P00065,Player_RZA_02,DF,60,0,0,0,77,85,0,1,1,None,6.81
-M0209,Real Zaragoza,P00066,Player_RZA_03,DF,62,0,0,0,22,70,3,1,0,None,6.74
-M0209,Real Zaragoza,P00067,Player_RZA_04,DF,65,0,1,0,28,89,1,2,0,None,6.28
-M0209,Real Zaragoza,P00068,Player_RZA_05,DF,76,0,0,0,49,78,0,2,0,None,6.07
-M0209,Real Zaragoza,P00069,Player_RZA_06,MF,85,3,0,0,73,81,1,1,1,None,6.64
-M0209,Real Zaragoza,P00070,Player_RZA_07,MF,72,3,0,0,29,84,2,0,2,None,6.71
-M0209,Real Zaragoza,P00071,Player_RZA_08,MF,78,3,0,1,49,89,3,0,0,None,6.36
-M0209,Real Zaragoza,P00072,Player_RZA_09,FW,76,2,0,0,79,92,1,1,0,None,6.35
-M0209,Real Zaragoza,P00073,Player_RZA_10,FW,75,3,0,0,73,76,1,1,2,None,6.22
-M0209,Real Zaragoza,P00074,Player_RZA_11,FW,12,1,0,0,12,93,0,0,1,Yellow,6.41
-M0209,Real Zaragoza,P00075,Player_RZA_12,DF,17,0,1,1,28,57,2,1,0,None,5.94
-M0029,RC Celta,P00076,Player_CEL_01,GK,89,1,0,0,22,72,1,2,0,Yellow,5.22
-M0029,RC Celta,P00077,Player_CEL_02,DF,89,1,0,0,18,82,3,2,1,None,7.81
-M0029,RC Celta,P00078,Player_CEL_03,DF,68,0,0,0,20,80,1,2,2,None,6.64
-M0029,RC Celta,P00079,Player_CEL_04,DF,76,1,0,0,77,94,3,1,1,None,6.22
-M0029,RC Celta,P00080,Player_CEL_05,DF,62,1,1,0,36,76,0,2,0,Red,7.3
-M0029,RC Celta,P00081,Player_CEL_06,MF,87,3,0,0,28,76,2,2,1,Yellow,6.95
-M0029,RC Celta,P00082,Player_CEL_07,MF,78,4,0,0,61,88,2,1,0,None,6.7
-M0029,RC Celta,P00083,Player_CEL_08,MF,83,0,0,0,72,90,1,2,1,None,6.3
-M0029,RC Celta,P00084,Player_CEL_09,FW,69,2,0,1,25,73,0,1,0,None,6.07
-M0029,RC Celta,P00085,Player_CEL_10,FW,69,1,1,1,30,66,1,1,1,None,7.62
-M0029,RC Celta,P00086,Player_CEL_11,FW,84,3,0,0,61,88,0,2,1,None,5.97
-M0029,RC Celta,P00087,Player_CEL_12,DF,11,0,1,0,31,98,1,0,0,None,7.41
-M0029,RC Celta,P00088,Player_CEL_13,DF,21,0,0,1,34,75,0,1,0,None,6.1
-M0029,Osasuna,P00089,Player_OSA_01,GK,67,0,0,0,20,68,1,1,1,None,7.2
-M0029,Osasuna,P00090,Player_OSA_02,DF,66,0,0,0,51,79,3,2,0,None,7.84
-M0029,Osasuna,P00091,Player_OSA_03,DF,69,0,0,0,51,75,3,1,2,None,6.92
-M0029,Osasuna,P00092,Player_OSA_04,DF,63,1,0,0,30,83,1,2,2,None,6.33
-M0029,Osasuna,P00093,Player_OSA_05,DF,61,0,0,0,76,69,2,2,2,None,5.83
-M0029,Osasuna,P00094,Player_OSA_06,MF,65,3,0,0,71,81,2,0,2,None,5.81
-M0029,Osasuna,P00095,Player_OSA_07,MF,89,2,0,0,36,70,0,1,0,None,7.23
-M0029,Osasuna,P00096,Player_OSA_08,MF,69,3,0,0,45,87,2,2,2,Yellow,7.88
-M0029,Osasuna,P00097,Player_OSA_09,FW,80,1,0,0,24,65,0,1,2,None,6.05
-M0029,Osasuna,P00098,Player_OSA_10,FW,80,2,0,0,15,84,1,0,0,None,8.3
-M0029,Osasuna,P00099,Player_OSA_11,DF,20,0,0,0,19,83,0,1,1,None,5.89
-M0029,Osasuna,P00100,Player_OSA_12,DF,28,0,0,0,15,73,1,0,1,None,7.03
-M0228,Atlético de Madrid,P00101,Player_ATM_01,GK,61,0,0,0,6,68,1,0,0,None,7.98
-M0228,Atlético de Madrid,P00102,Player_ATM_02,DF,69,1,0,1,54,91,1,2,0,None,5.81
-M0228,Atlético de Madrid,P00103,Player_ATM_03,DF,81,1,0,0,36,84,0,1,1,None,6.21
-M0228,Atlético de Madrid,P00104,Player_ATM_04,DF,84,1,0,0,54,91,3,2,1,None,7.03
-M0228,Atlético de Madrid,P00105,Player_ATM_05,DF,60,0,1,0,50,77,3,1,1,None,6.09
-M0228,Atlético de Madrid,P00106,Player_ATM_06,MF,88,3,0,0,42,87,0,1,1,None,5.23
-M0228,Atlético de Madrid,P00107,Player_ATM_07,MF,85,3,0,0,50,69,1,1,1,None,7.31
-M0228,Atlético de Madrid,P00108,Player_ATM_08,MF,62,4,0,0,30,87,2,1,2,None,5.9
-M0228,Atlético de Madrid,P00109,Player_ATM_09,FW,90,3,0,0,28,81,1,2,2,None,4.5
-M0228,Atlético de Madrid,P00110,Player_ATM_10,FW,67,2,0,0,57,71,1,2,0,None,6.17
-M0228,Atlético de Madrid,P00111,Player_ATM_11,FW,86,3,0,0,19,75,0,1,1,None,6.72
-M0228,Atlético de Madrid,P00112,Player_ATM_12,FW,14,2,0,0,29,76,0,1,0,None,4.81
-M0228,Atlético de Madrid,P00113,Player_ATM_13,DF,33,0,0,0,33,79,2,0,0,None,7.18
-M0228,Real Madrid,P00114,Player_RMA_01,GK,60,0,0,1,24,70,1,2,2,None,7.4
-M0228,Real Madrid,P00115,Player_RMA_02,DF,64,0,0,0,34,84,3,1,2,None,6.85
-M0228,Real Madrid,P00116,Player_RMA_03,DF,72,0,0,0,27,96,0,2,1,None,5.89
-M0228,Real Madrid,P00117,Player_RMA_04,DF,85,1,0,0,40,71,2,2,2,None,5.93
-M0228,Real Madrid,P00118,Player_RMA_05,DF,78,1,1,0,69,85,2,1,1,None,5.71
-M0228,Real Madrid,P00119,Player_RMA_06,MF,70,2,0,0,20,73,3,0,2,None,5.84
-M0228,Real Madrid,P00120,Player_RMA_07,MF,67,2,0,0,61,91,3,0,1,None,5.66
-M0228,Real Madrid,P00121,Player_RMA_08,MF,65,3,0,0,65,77,2,1,1,None,6.49
-M0228,Real Madrid,P00122,Player_RMA_09,FW,84,3,0,1,18,91,1,2,1,None,6.19
-M0228,Real Madrid,P00123,Player_RMA_10,FW,68,4,1,1,42,65,0,0,2,None,7.26
-M0228,Real Madrid,P00124,Player_RMA_11,DF,42,0,0,0,18,77,1,1,1,None,5.89
-M0228,Real Madrid,P00125,Player_RMA_12,DF,38,0,1,0,19,80,0,0,0,None,6.38
-M0115,Real Madrid,P00126,Player_RMA_01,GK,80,1,1,0,24,74,1,2,1,None,5.13
-M0115,Real Madrid,P00127,Player_RMA_02,DF,76,1,0,1,55,77,0,1,1,None,6.16
-M0115,Real Madrid,P00128,Player_RMA_03,DF,86,1,0,1,15,85,0,2,1,None,6.05
-M0115,Real Madrid,P00129,Player_RMA_04,DF,85,1,0,0,64,83,0,2,1,None,7.42
-M0115,Real Madrid,P00130,Player_RMA_05,DF,79,0,0,0,41,73,2,0,2,None,6.9
-M0115,Real Madrid,P00131,Player_RMA_06,MF,74,2,0,0,45,75,2,1,2,Yellow,6.82
-M0115,Real Madrid,P00132,Player_RMA_07,MF,68,3,0,0,44,90,1,1,1,Yellow,6.24
-M0115,Real Madrid,P00133,Player_RMA_08,MF,80,4,0,0,72,94,0,2,0,None,5.59
-M0115,Real Madrid,P00134,Player_RMA_09,FW,77,4,0,0,56,93,1,2,2,Yellow,6.64
-M0115,Real Madrid,P00135,Player_RMA_10,FW,68,4,0,0,43,76,1,2,0,None,6.42
-M0115,Real Madrid,P00136,Player_RMA_11,FW,71,1,1,0,21,80,0,0,2,None,7.27
-M0115,Real Madrid,P00137,Player_RMA_12,MF,40,1,0,0,8,74,2,1,1,None,5.93
-M0115,Real Madrid,P00138,Player_RMA_13,FW,11,2,0,0,10,58,0,0,1,None,5.44
-M0115,Villarreal CF,P00139,Player_VIL_01,GK,90,1,0,0,23,88,0,0,2,None,7.95
-M0115,Villarreal CF,P00140,Player_VIL_02,DF,64,1,0,0,73,85,0,0,2,None,5.8
-M0115,Villarreal CF,P00141,Player_VIL_03,DF,74,0,0,0,24,76,2,2,1,None,5.72
-M0115,Villarreal CF,P00142,Player_VIL_04,DF,72,0,0,0,22,73,2,2,0,None,6.16
-M0115,Villarreal CF,P00143,Player_VIL_05,DF,62,0,0,1,30,88,3,0,0,None,6.72
-M0115,Villarreal CF,P00144,Player_VIL_06,MF,84,1,1,0,36,96,0,2,1,None,7.02
-M0115,Villarreal CF,P00145,Player_VIL_07,MF,67,0,0,0,64,79,0,1,0,None,6.54
-M0115,Villarreal CF,P00146,Player_VIL_08,MF,63,0,0,0,57,88,2,1,0,None,7.25
-M0115,Villarreal CF,P00147,Player_VIL_09,FW,70,3,0,0,73,71,1,0,1,None,7.84
-M0115,Villarreal CF,P00148,Player_VIL_10,FW,84,1,0,0,40,92,1,1,0,None,7.07
-M0115,Villarreal CF,P00149,Player_VIL_11,DF,22,0,0,0,29,79,0,1,0,None,6.03
-M0115,Villarreal CF,P00150,Player_VIL_12,FW,21,2,0,0,17,69,0,0,0,None,5.48
-M0149,Real Zaragoza,P00151,Player_RZA_01,GK,80,1,0,0,18,78,1,2,2,None,7.12
-M0149,Real Zaragoza,P00152,Player_RZA_02,DF,82,1,0,0,70,77,2,2,0,None,7.45
-M0149,Real Zaragoza,P00153,Player_RZA_03,DF,78,1,0,0,66,75,2,1,0,None,7.0
-M0149,Real Zaragoza,P00154,Player_RZA_04,DF,89,0,0,1,68,83,3,0,1,None,6.31
-M0149,Real Zaragoza,P00155,Player_RZA_05,DF,67,1,0,0,40,77,2,2,2,None,5.88
-M0149,Real Zaragoza,P00156,Player_RZA_06,MF,82,4,0,0,32,72,2,2,2,None,6.88
-M0149,Real Zaragoza,P00157,Player_RZA_07,MF,72,3,1,0,61,81,1,2,1,None,6.59
-M0149,Real Zaragoza,P00158,Player_RZA_08,MF,86,0,0,0,71,87,0,0,0,None,7.28
-M0149,Real Zaragoza,P00159,Player_RZA_09,FW,82,3,0,0,31,74,0,0,1,None,7.1
-M0149,Real Zaragoza,P00160,Player_RZA_10,FW,70,0,0,0,52,79,0,2,2,None,6.27
-M0149,Real Zaragoza,P00161,Player_RZA_11,FW,80,2,0,0,38,74,0,0,0,None,6.47
-M0149,Real Zaragoza,P00162,Player_RZA_12,DF,43,0,0,0,20,91,0,1,1,None,6.77
-M0149,Real Zaragoza,P00163,Player_RZA_13,MF,18,0,0,0,23,76,1,1,1,None,6.22
-M0149,Real Madrid,P00164,Player_RMA_01,GK,84,0,0,0,10,74,0,2,2,None,6.7
-M0149,Real Madrid,P00165,Player_RMA_02,DF,90,1,1,1,44,84,1,0,0,None,7.76
-M0149,Real Madrid,P00166,Player_RMA_03,DF,90,0,1,0,77,76,3,0,2,None,7.15
-M0149,Real Madrid,P00167,Player_RMA_04,DF,62,0,0,1,19,95,3,0,1,None,7.13
-M0149,Real Madrid,P00168,Player_RMA_05,DF,72,1,0,0,22,68,0,1,0,None,7.36
-M0149,Real Madrid,P00169,Player_RMA_06,MF,70,2,0,0,56,80,0,1,0,None,7.41
-M0149,Real Madrid,P00170,Player_RMA_07,MF,79,1,0,0,70,81,1,0,2,None,7.05
-M0149,Real Madrid,P00171,Player_RMA_08,MF,88,1,0,0,45,79,2,1,0,None,6.89
-M0149,Real Madrid,P00172,Player_RMA_09,FW,72,1,0,0,72,77,0,0,2,None,6.28
-M0149,Real Madrid,P00173,Player_RMA_10,FW,81,2,0,0,76,80,1,0,2,None,6.65
-M0149,Real Madrid,P00174,Player_RMA_11,FW,44,2,0,0,18,64,0,0,1,None,5.59
-M0149,Real Madrid,P00175,Player_RMA_12,MF,17,1,0,0,14,85,2,1,1,None,6.46
-M0063,Villarreal CF,P00176,Player_VIL_01,GK,63,0,0,0,22,83,1,0,1,None,6.95
-M0063,Villarreal CF,P00177,Player_VIL_02,DF,83,0,0,0,42,84,1,1,0,None,6.92
-M0063,Villarreal CF,P00178,Player_VIL_03,DF,81,1,0,0,73,88,2,0,0,None,6.4
-M0063,Villarreal CF,P00179,Player_VIL_04,DF,90,1,0,0,49,81,3,2,0,None,6.75
-M0063,Villarreal CF,P00180,Player_VIL_05,DF,86,1,0,0,58,86,1,0,1,None,6.36
-M0063,Villarreal CF,P00181,Player_VIL_06,MF,90,3,0,0,73,75,0,2,2,None,8.31
-M0063,Villarreal CF,P00182,Player_VIL_07,MF,89,2,0,0,28,91,3,0,2,None,7.44
-M0063,Villarreal CF,P00183,Player_VIL_08,MF,77,1,0,0,41,90,1,2,1,None,7.72
-M0063,Villarreal CF,P00184,Player_VIL_09,FW,74,4,0,0,75,85,0,1,0,None,6.73
-M0063,Villarreal CF,P00185,Player_VIL_10,FW,88,1,0,0,45,80,1,2,1,None,6.01
-M0063,Villarreal CF,P00186,Player_VIL_11,FW,61,0,0,0,70,63,0,1,2,None,8.19
-M0063,Villarreal CF,P00187,Player_VIL_12,MF,25,1,0,0,21,76,1,1,0,None,6.02
-M0063,Villarreal CF,P00188,Player_VIL_13,DF,43,0,0,0,10,87,1,1,1,None,6.17
-M0063,Valencia CF,P00189,Player_VAL_01,GK,78,0,0,0,12,89,0,2,1,None,6.55
-M0063,Valencia CF,P00190,Player_VAL_02,DF,81,1,0,0,69,86,1,2,0,Yellow,7.23
-M0063,Valencia CF,P00191,Player_VAL_03,DF,90,0,0,0,18,62,0,0,1,None,6.72
-M0063,Valencia CF,P00192,Player_VAL_04,DF,68,0,0,0,74,79,3,0,0,None,6.28
-M0063,Valencia CF,P00193,Player_VAL_05,DF,64,0,0,0,75,89,2,2,1,Yellow,6.62
-M0063,Valencia CF,P00194,Player_VAL_06,MF,85,1,0,0,32,81,1,1,2,Red,5.46
-M0063,Valencia CF,P00195,Player_VAL_07,MF,88,4,0,0,23,85,1,2,1,None,6.21
-M0063,Valencia CF,P00196,Player_VAL_08,MF,67,0,0,0,38,69,1,0,2,None,6.71
-M0063,Valencia CF,P00197,Player_VAL_09,FW,87,2,0,0,44,83,1,2,0,None,6.57
-M0063,Valencia CF,P00198,Player_VAL_10,FW,69,1,0,0,45,90,0,1,1,Red,5.92
-M0063,Valencia CF,P00199,Player_VAL_11,FW,32,0,0,0,19,74,0,0,0,None,6.6
-M0063,Valencia CF,P00200,Player_VAL_12,FW,43,2,0,0,22,82,0,0,0,None,6.07
-M0003,Atlético de Madrid,P00201,Player_ATM_01,GK,78,0,0,0,20,84,0,0,1,None,6.53
-M0003,Atlético de Madrid,P00202,Player_ATM_02,DF,70,0,0,0,73,80,0,2,1,None,6.85
-M0003,Atlético de Madrid,P00203,Player_ATM_03,DF,73,0,0,0,30,85,3,0,0,None,6.09
-M0003,Atlético de Madrid,P00204,Player_ATM_04,DF,64,1,0,0,36,88,1,0,1,None,7.61
-M0003,Atlético de Madrid,P00205,Player_ATM_05,DF,65,0,0,0,20,77,1,2,2,None,6.63
-M0003,Atlético de Madrid,P00206,Player_ATM_06,MF,71,2,0,0,50,78,1,0,1,Yellow,5.87
-M0003,Atlético de Madrid,P00207,Player_ATM_07,MF,82,1,0,0,52,92,0,2,2,None,6.3
-M0003,Atlético de Madrid,P00208,Player_ATM_08,MF,82,4,0,0,55,95,1,2,1,None,6.85
-M0003,Atlético de Madrid,P00209,Player_ATM_09,FW,70,0,0,0,75,90,0,2,1,None,5.7
-M0003,Atlético de Madrid,P00210,Player_ATM_10,FW,61,3,0,0,74,79,0,1,2,None,6.46
-M0003,Atlético de Madrid,P00211,Player_ATM_11,FW,71,0,0,0,29,88,1,2,1,None,7.38
-M0003,Atlético de Madrid,P00212,Player_ATM_12,FW,11,2,0,0,8,56,0,1,1,None,6.86
-M0003,Atlético de Madrid,P00213,Player_ATM_13,FW,35,0,0,0,15,81,0,1,0,None,6.1
-M0003,FC Barcelona,P00214,Player_FCB_01,GK,72,1,0,0,18,75,1,1,0,Yellow,6.42
-M0003,FC Barcelona,P00215,Player_FCB_02,DF,87,1,1,0,23,73,3,1,1,None,6.38
-M0003,FC Barcelona,P00216,Player_FCB_03,DF,70,0,0,0,32,81,0,1,1,None,7.3
-M0003,FC Barcelona,P00217,Player_FCB_04,DF,75,1,0,0,59,71,0,2,1,None,5.57
-M0003,FC Barcelona,P00218,Player_FCB_05,DF,86,1,0,0,61,78,3,2,1,None,5.43
-M0003,FC Barcelona,P00219,Player_FCB_06,MF,79,1,0,0,40,82,0,0,2,None,6.53
-M0003,FC Barcelona,P00220,Player_FCB_07,MF,61,0,0,0,33,92,1,2,2,None,6.88
-M0003,FC Barcelona,P00221,Player_FCB_08,MF,70,0,0,0,40,89,2,2,1,Yellow,6.21
-M0003,FC Barcelona,P00222,Player_FCB_09,FW,73,3,0,0,38,77,1,1,1,None,7.37
-M0003,FC Barcelona,P00223,Player_FCB_10,FW,75,1,0,0,43,98,1,2,0,None,6.13
-M0003,FC Barcelona,P00224,Player_FCB_11,DF,23,0,0,0,30,72,2,0,1,None,5.75
-M0003,FC Barcelona,P00225,Player_FCB_12,DF,12,0,0,1,30,77,0,1,1,None,6.78
-M0113,Real Betis,P00226,Player_BET_01,GK,71,0,0,0,18,79,0,1,1,None,5.57
-M0113,Real Betis,P00227,Player_BET_02,DF,68,0,0,0,37,73,2,2,1,None,6.48
-M0113,Real Betis,P00228,Player_BET_03,DF,62,0,0,0,54,67,3,1,0,None,7.3
-M0113,Real Betis,P00229,Player_BET_04,DF,63,1,0,0,26,84,1,2,2,None,7.46
-M0113,Real Betis,P00230,Player_BET_05,DF,65,1,0,0,67,82,2,2,2,None,6.6
-M0113,Real Betis,P00231,Player_BET_06,MF,62,1,0,0,37,79,0,1,0,None,6.88
-M0113,Real Betis,P00232,Player_BET_07,MF,85,4,0,0,35,86,3,0,2,Yellow,7.29
-M0113,Real Betis,P00233,Player_BET_08,MF,82,1,0,0,52,68,3,1,0,None,6.84
-M0113,Real Betis,P00234,Player_BET_09,FW,76,2,0,0,15,98,1,1,0,None,7.6
-M0113,Real Betis,P00235,Player_BET_10,FW,81,0,0,0,33,82,1,0,2,None,6.79
-M0113,Real Betis,P00236,Player_BET_11,FW,70,0,0,0,26,98,0,0,1,None,5.91
-M0113,Real Betis,P00237,Player_BET_12,MF,30,0,0,0,16,90,1,1,0,None,6.52
-M0113,Real Betis,P00238,Player_BET_13,DF,39,0,0,0,24,80,2,1,1,None,7.07
-M0113,FC Barcelona,P00239,Player_FCB_01,GK,81,0,0,0,16,81,1,2,1,None,6.25
-M0113,FC Barcelona,P00240,Player_FCB_02,DF,83,1,0,0,71,79,0,0,1,None,5.48
-M0113,FC Barcelona,P00241,Player_FCB_03,DF,86,1,0,1,66,81,1,2,1,None,6.57
-M0113,FC Barcelona,P00242,Player_FCB_04,DF,84,1,0,0,45,79,3,1,2,None,6.19
-M0113,FC Barcelona,P00243,Player_FCB_05,DF,60,0,0,0,49,76,1,1,0,None,7.23
-M0113,FC Barcelona,P00244,Player_FCB_06,MF,89,3,0,1,24,81,0,0,0,None,7.34
-M0113,FC Barcelona,P00245,Player_FCB_07,MF,63,1,0,0,33,74,2,1,0,None,6.02
-M0113,FC Barcelona,P00246,Player_FCB_08,MF,84,1,1,0,19,71,0,1,1,None,6.11
-M0113,FC Barcelona,P00247,Player_FCB_09,FW,90,3,0,0,42,89,1,2,0,None,6.67
-M0113,FC Barcelona,P00248,Player_FCB_10,FW,66,1,0,0,30,76,1,2,1,None,6.89
-M0113,FC Barcelona,P00249,Player_FCB_11,FW,22,0,0,0,25,85,0,0,1,None,6.07
-M0113,FC Barcelona,P00250,Player_FCB_12,DF,37,0,1,0,19,83,2,0,1,None,5.91
+M0059,RC Celta,P00001,Iván Villar,GK,64,0,0,1,14,76,1,2,0,,5.51
+M0059,RC Celta,P00002,Kevin Vázquez,DF,67,0,0,0,16,88,2,2,0,,6.59
+M0059,RC Celta,P00003,Unai Núñez,DF,85,1,0,0,26,67,1,0,1,Yellow,5.25
+M0059,RC Celta,P00004,Carl Starfelt,DF,65,0,0,0,52,75,2,0,1,,7.21
+M0059,RC Celta,P00005,Óscar Mingueza,DF,73,0,0,0,21,88,2,2,2,,5.84
+M0059,RC Celta,P00006,Fran Beltrán,MF,65,3,1,0,47,78,1,1,0,,6.65
+M0059,RC Celta,P00007,Luca de la Torre,MF,80,2,0,0,19,89,2,0,1,,6.95
+M0059,RC Celta,P00008,Jonathan Bamba,MF,86,4,0,1,32,78,2,1,2,,7.15
+M0059,RC Celta,P00009,Iago Aspas,FW,79,3,1,0,75,88,0,0,2,,7.13
+M0059,RC Celta,P00010,Strand Larsen,FW,62,4,0,0,49,81,0,2,1,,6.61
+M0059,RC Celta,P00011,Williot Swedberg,FW,90,3,0,0,49,83,1,2,2,,7.04
+M0059,RC Celta,P00012,Iván Villar,DF,44,0,0,0,20,64,2,1,0,,5.43
+M0059,RC Celta,P00013,Kevin Vázquez,MF,38,2,0,0,15,72,2,1,0,,6.79
+M0059,Sevilla FC,P00014,Marko Dmitrović,GK,82,1,1,0,18,91,0,0,2,,5.55
+M0059,Sevilla FC,P00015,Jesús Navas,DF,80,1,0,1,18,79,1,1,2,Yellow,7.39
+M0059,Sevilla FC,P00016,Sergio Ramos,DF,70,0,1,1,41,71,1,0,0,Yellow,7.64
+M0059,Sevilla FC,P00017,Loïc Badé,DF,82,0,0,0,68,74,2,0,2,,6.26
+M0059,Sevilla FC,P00018,Marcos Acuña,DF,67,1,0,0,61,85,1,1,0,,6.55
+M0059,Sevilla FC,P00019,Ivan Rakitić,MF,82,2,1,0,26,95,2,1,1,Yellow,6.28
+M0059,Sevilla FC,P00020,Fernando,MF,72,4,0,0,51,83,1,2,2,,7.33
+M0059,Sevilla FC,P00021,Óliver Torres,MF,81,3,0,0,43,73,3,2,1,,6.5
+M0059,Sevilla FC,P00022,Lucas Ocampos,FW,89,2,0,0,59,89,0,0,2,Yellow,6.25
+M0059,Sevilla FC,P00023,Youssef En-Nesyri,FW,78,3,0,0,71,89,0,2,0,,6.52
+M0059,Sevilla FC,P00024,Suso,DF,21,0,0,0,21,76,0,1,1,,5.88
+M0059,Sevilla FC,P00025,Marko Dmitrović,FW,43,2,0,1,24,76,0,0,1,,5.86
+M0173,FC Barcelona,P00026,Marc-André ter Stegen,GK,84,1,1,0,12,86,1,1,2,,5.85
+M0173,FC Barcelona,P00027,Ronald Araújo,DF,87,0,0,0,27,78,3,2,2,,6.93
+M0173,FC Barcelona,P00028,Jules Koundé,DF,83,0,0,1,16,86,1,1,0,,7.29
+M0173,FC Barcelona,P00029,Andreas Christensen,DF,65,1,1,0,38,70,3,0,0,,7.25
+M0173,FC Barcelona,P00030,Alejandro Balde,DF,82,0,0,1,71,74,2,1,0,,7.39
+M0173,FC Barcelona,P00031,Frenkie de Jong,MF,84,1,0,0,54,73,2,2,2,,7.11
+M0173,FC Barcelona,P00032,Pedri,MF,72,0,0,0,23,61,3,1,2,,8.09
+M0173,FC Barcelona,P00033,Gavi,MF,87,0,0,0,62,68,2,0,1,,6.05
+M0173,FC Barcelona,P00034,Ilkay Gündogan,FW,67,4,0,0,20,97,0,2,1,,7.84
+M0173,FC Barcelona,P00035,Robert Lewandowski,FW,63,3,0,0,39,74,0,0,1,,7.37
+M0173,FC Barcelona,P00036,Raphinha,FW,62,3,0,0,36,93,0,1,0,,8.01
+M0173,FC Barcelona,P00037,Marc-André ter Stegen,FW,15,1,0,0,7,91,0,0,1,,5.89
+M0173,FC Barcelona,P00038,Ronald Araújo,DF,34,0,0,0,13,81,2,0,1,,5.33
+M0173,Villarreal CF,P00039,Filip Jörgensen,GK,63,0,0,0,14,84,0,1,0,,7.46
+M0173,Villarreal CF,P00040,Juan Foyth,DF,60,0,0,0,31,72,0,2,1,Yellow,6.05
+M0173,Villarreal CF,P00041,Raúl Albiol,DF,67,1,0,0,73,85,2,1,1,,7.3
+M0173,Villarreal CF,P00042,Pau Torres,DF,90,0,0,0,27,75,1,0,2,,7.57
+M0173,Villarreal CF,P00043,Alfonso Pedraza,DF,80,1,0,0,69,70,0,1,2,,7.06
+M0173,Villarreal CF,P00044,Dani Parejo,MF,80,3,0,0,47,73,1,0,0,,7.09
+M0173,Villarreal CF,P00045,Étienne Capoue,MF,73,0,0,0,22,73,0,1,1,,6.22
+M0173,Villarreal CF,P00046,Álex Baena,MF,78,2,0,0,57,70,2,0,0,,7.02
+M0173,Villarreal CF,P00047,Gerard Moreno,FW,67,1,0,0,51,76,1,0,2,,7.7
+M0173,Villarreal CF,P00048,José Luis Morales,FW,78,2,0,0,63,70,1,2,2,,5.9
+M0173,Villarreal CF,P00049,Yeremy Pino,MF,26,1,0,0,28,85,2,0,1,Yellow,6.08
+M0173,Villarreal CF,P00050,Filip Jörgensen,DF,13,0,0,0,30,75,1,1,1,,6.85
+M0209,RC Celta,P00051,Iván Villar,GK,76,0,0,0,18,76,1,2,0,,7.32
+M0209,RC Celta,P00052,Kevin Vázquez,DF,69,1,0,0,54,84,3,1,1,Yellow,6.72
+M0209,RC Celta,P00053,Unai Núñez,DF,71,0,0,0,30,73,0,0,0,,7.36
+M0209,RC Celta,P00054,Carl Starfelt,DF,90,1,0,0,38,98,2,1,2,,6.44
+M0209,RC Celta,P00055,Óscar Mingueza,DF,62,1,0,0,72,90,0,2,1,,6.62
+M0209,RC Celta,P00056,Fran Beltrán,MF,82,1,0,0,26,79,3,0,1,,7.12
+M0209,RC Celta,P00057,Luca de la Torre,MF,84,1,0,0,17,75,1,1,0,,5.38
+M0209,RC Celta,P00058,Jonathan Bamba,MF,89,4,0,0,52,84,0,2,1,,6.79
+M0209,RC Celta,P00059,Iago Aspas,FW,84,4,0,0,19,78,1,2,2,,6.61
+M0209,RC Celta,P00060,Strand Larsen,FW,77,4,0,0,37,76,1,0,2,,7.86
+M0209,RC Celta,P00061,Williot Swedberg,FW,70,4,0,0,19,76,1,0,0,,6.53
+M0209,RC Celta,P00062,Iván Villar,FW,11,0,0,0,12,80,0,1,0,,6.35
+M0209,RC Celta,P00063,Kevin Vázquez,DF,35,0,0,0,31,83,0,1,1,,7.61
+M0209,Real Zaragoza,P00064,Cristian Álvarez,GK,89,0,0,0,19,80,0,0,2,,6.27
+M0209,Real Zaragoza,P00065,Iván Calero,DF,60,0,0,0,77,85,0,1,1,,6.81
+M0209,Real Zaragoza,P00066,Jair Amador,DF,62,0,0,0,22,70,3,1,0,,6.74
+M0209,Real Zaragoza,P00067,Alejandro Francés,DF,65,0,1,0,28,89,1,2,0,,6.28
+M0209,Real Zaragoza,P00068,Carlos Nieto,DF,76,0,0,0,49,78,0,2,0,,6.07
+M0209,Real Zaragoza,P00069,Francho Serrano,MF,85,3,0,0,73,81,1,1,1,,6.64
+M0209,Real Zaragoza,P00070,Marc Aguado,MF,72,3,0,0,29,84,2,0,2,,6.71
+M0209,Real Zaragoza,P00071,Maikel Mesa,MF,78,3,0,1,49,89,3,0,0,,6.36
+M0209,Real Zaragoza,P00072,Víctor Mollejo,FW,76,2,0,0,79,92,1,1,0,,6.35
+M0209,Real Zaragoza,P00073,Iván Azón,FW,75,3,0,0,73,76,1,1,2,,6.22
+M0209,Real Zaragoza,P00074,Sergio Bermejo,FW,12,1,0,0,12,93,0,0,1,Yellow,6.41
+M0209,Real Zaragoza,P00075,Cristian Álvarez,DF,17,0,1,1,28,57,2,1,0,,5.94
+M0029,RC Celta,P00076,Iván Villar,GK,89,1,0,0,22,72,1,2,0,Yellow,5.22
+M0029,RC Celta,P00077,Kevin Vázquez,DF,89,1,0,0,18,82,3,2,1,,7.81
+M0029,RC Celta,P00078,Unai Núñez,DF,68,0,0,0,20,80,1,2,2,,6.64
+M0029,RC Celta,P00079,Carl Starfelt,DF,76,1,0,0,77,94,3,1,1,,6.22
+M0029,RC Celta,P00080,Óscar Mingueza,DF,62,1,1,0,36,76,0,2,0,Red,7.3
+M0029,RC Celta,P00081,Fran Beltrán,MF,87,3,0,0,28,76,2,2,1,Yellow,6.95
+M0029,RC Celta,P00082,Luca de la Torre,MF,78,4,0,0,61,88,2,1,0,,6.7
+M0029,RC Celta,P00083,Jonathan Bamba,MF,83,0,0,0,72,90,1,2,1,,6.3
+M0029,RC Celta,P00084,Iago Aspas,FW,69,2,0,1,25,73,0,1,0,,6.07
+M0029,RC Celta,P00085,Strand Larsen,FW,69,1,1,1,30,66,1,1,1,,7.62
+M0029,RC Celta,P00086,Williot Swedberg,FW,84,3,0,0,61,88,0,2,1,,5.97
+M0029,RC Celta,P00087,Iván Villar,DF,11,0,1,0,31,98,1,0,0,,7.41
+M0029,RC Celta,P00088,Kevin Vázquez,DF,21,0,0,1,34,75,0,1,0,,6.1
+M0029,Osasuna,P00089,Sergio Herrera,GK,67,0,0,0,20,68,1,1,1,,7.2
+M0029,Osasuna,P00090,Jesús Areso,DF,66,0,0,0,51,79,3,2,0,,7.84
+M0029,Osasuna,P00091,David García,DF,69,0,0,0,51,75,3,1,2,,6.92
+M0029,Osasuna,P00092,Unai García,DF,63,1,0,0,30,83,1,2,2,,6.33
+M0029,Osasuna,P00093,Juan Cruz,DF,61,0,0,0,76,69,2,2,2,,5.83
+M0029,Osasuna,P00094,Lucas Torró,MF,65,3,0,0,71,81,2,0,2,,5.81
+M0029,Osasuna,P00095,Aimar Oroz,MF,89,2,0,0,36,70,0,1,0,,7.23
+M0029,Osasuna,P00096,Moi Gómez,MF,69,3,0,0,45,87,2,2,2,Yellow,7.88
+M0029,Osasuna,P00097,Rubén García,FW,80,1,0,0,24,65,0,1,2,,6.05
+M0029,Osasuna,P00098,Ante Budimir,FW,80,2,0,0,15,84,1,0,0,,8.3
+M0029,Osasuna,P00099,Chimy Ávila,DF,20,0,0,0,19,83,0,1,1,,5.89
+M0029,Osasuna,P00100,Sergio Herrera,DF,28,0,0,0,15,73,1,0,1,,7.03
+M0228,Atlético de Madrid,P00101,Jan Oblak,GK,61,0,0,0,6,68,1,0,0,,7.98
+M0228,Atlético de Madrid,P00102,Nahuel Molina,DF,69,1,0,1,54,91,1,2,0,,5.81
+M0228,Atlético de Madrid,P00103,José Giménez,DF,81,1,0,0,36,84,0,1,1,,6.21
+M0228,Atlético de Madrid,P00104,Axel Witsel,DF,84,1,0,0,54,91,3,2,1,,7.03
+M0228,Atlético de Madrid,P00105,Mario Hermoso,DF,60,0,1,0,50,77,3,1,1,,6.09
+M0228,Atlético de Madrid,P00106,Koke,MF,88,3,0,0,42,87,0,1,1,,5.23
+M0228,Atlético de Madrid,P00107,Rodrigo De Paul,MF,85,3,0,0,50,69,1,1,1,,7.31
+M0228,Atlético de Madrid,P00108,Saúl Ñíguez,MF,62,4,0,0,30,87,2,1,2,,5.9
+M0228,Atlético de Madrid,P00109,Antoine Griezmann,FW,90,3,0,0,28,81,1,2,2,,4.5
+M0228,Atlético de Madrid,P00110,Álvaro Morata,FW,67,2,0,0,57,71,1,2,0,,6.17
+M0228,Atlético de Madrid,P00111,Samuel Lino,FW,86,3,0,0,19,75,0,1,1,,6.72
+M0228,Atlético de Madrid,P00112,Jan Oblak,FW,14,2,0,0,29,76,0,1,0,,4.81
+M0228,Atlético de Madrid,P00113,Nahuel Molina,DF,33,0,0,0,33,79,2,0,0,,7.18
+M0228,Real Madrid,P00114,Thibaut Courtois,GK,60,0,0,1,24,70,1,2,2,,7.4
+M0228,Real Madrid,P00115,Dani Carvajal,DF,64,0,0,0,34,84,3,1,2,,6.85
+M0228,Real Madrid,P00116,Éder Militão,DF,72,0,0,0,27,96,0,2,1,,5.89
+M0228,Real Madrid,P00117,David Alaba,DF,85,1,0,0,40,71,2,2,2,,5.93
+M0228,Real Madrid,P00118,Ferland Mendy,DF,78,1,1,0,69,85,2,1,1,,5.71
+M0228,Real Madrid,P00119,Toni Kroos,MF,70,2,0,0,20,73,3,0,2,,5.84
+M0228,Real Madrid,P00120,Luka Modrić,MF,67,2,0,0,61,91,3,0,1,,5.66
+M0228,Real Madrid,P00121,Federico Valverde,MF,65,3,0,0,65,77,2,1,1,,6.49
+M0228,Real Madrid,P00122,Jude Bellingham,FW,84,3,0,1,18,91,1,2,1,,6.19
+M0228,Real Madrid,P00123,Vinícius Jr,FW,68,4,1,1,42,65,0,0,2,,7.26
+M0228,Real Madrid,P00124,Rodrygo,DF,42,0,0,0,18,77,1,1,1,,5.89
+M0228,Real Madrid,P00125,Thibaut Courtois,DF,38,0,1,0,19,80,0,0,0,,6.38
+M0115,Real Madrid,P00126,Thibaut Courtois,GK,80,1,1,0,24,74,1,2,1,,5.13
+M0115,Real Madrid,P00127,Dani Carvajal,DF,76,1,0,1,55,77,0,1,1,,6.16
+M0115,Real Madrid,P00128,Éder Militão,DF,86,1,0,1,15,85,0,2,1,,6.05
+M0115,Real Madrid,P00129,David Alaba,DF,85,1,0,0,64,83,0,2,1,,7.42
+M0115,Real Madrid,P00130,Ferland Mendy,DF,79,0,0,0,41,73,2,0,2,,6.9
+M0115,Real Madrid,P00131,Toni Kroos,MF,74,2,0,0,45,75,2,1,2,Yellow,6.82
+M0115,Real Madrid,P00132,Luka Modrić,MF,68,3,0,0,44,90,1,1,1,Yellow,6.24
+M0115,Real Madrid,P00133,Federico Valverde,MF,80,4,0,0,72,94,0,2,0,,5.59
+M0115,Real Madrid,P00134,Jude Bellingham,FW,77,4,0,0,56,93,1,2,2,Yellow,6.64
+M0115,Real Madrid,P00135,Vinícius Jr,FW,68,4,0,0,43,76,1,2,0,,6.42
+M0115,Real Madrid,P00136,Rodrygo,FW,71,1,1,0,21,80,0,0,2,,7.27
+M0115,Real Madrid,P00137,Thibaut Courtois,MF,40,1,0,0,8,74,2,1,1,,5.93
+M0115,Real Madrid,P00138,Dani Carvajal,FW,11,2,0,0,10,58,0,0,1,,5.44
+M0115,Villarreal CF,P00139,Filip Jörgensen,GK,90,1,0,0,23,88,0,0,2,,7.95
+M0115,Villarreal CF,P00140,Juan Foyth,DF,64,1,0,0,73,85,0,0,2,,5.8
+M0115,Villarreal CF,P00141,Raúl Albiol,DF,74,0,0,0,24,76,2,2,1,,5.72
+M0115,Villarreal CF,P00142,Pau Torres,DF,72,0,0,0,22,73,2,2,0,,6.16
+M0115,Villarreal CF,P00143,Alfonso Pedraza,DF,62,0,0,1,30,88,3,0,0,,6.72
+M0115,Villarreal CF,P00144,Dani Parejo,MF,84,1,1,0,36,96,0,2,1,,7.02
+M0115,Villarreal CF,P00145,Étienne Capoue,MF,67,0,0,0,64,79,0,1,0,,6.54
+M0115,Villarreal CF,P00146,Álex Baena,MF,63,0,0,0,57,88,2,1,0,,7.25
+M0115,Villarreal CF,P00147,Gerard Moreno,FW,70,3,0,0,73,71,1,0,1,,7.84
+M0115,Villarreal CF,P00148,José Luis Morales,FW,84,1,0,0,40,92,1,1,0,,7.07
+M0115,Villarreal CF,P00149,Yeremy Pino,DF,22,0,0,0,29,79,0,1,0,,6.03
+M0115,Villarreal CF,P00150,Filip Jörgensen,FW,21,2,0,0,17,69,0,0,0,,5.48
+M0149,Real Zaragoza,P00151,Cristian Álvarez,GK,80,1,0,0,18,78,1,2,2,,7.12
+M0149,Real Zaragoza,P00152,Iván Calero,DF,82,1,0,0,70,77,2,2,0,,7.45
+M0149,Real Zaragoza,P00153,Jair Amador,DF,78,1,0,0,66,75,2,1,0,,7.0
+M0149,Real Zaragoza,P00154,Alejandro Francés,DF,89,0,0,1,68,83,3,0,1,,6.31
+M0149,Real Zaragoza,P00155,Carlos Nieto,DF,67,1,0,0,40,77,2,2,2,,5.88
+M0149,Real Zaragoza,P00156,Francho Serrano,MF,82,4,0,0,32,72,2,2,2,,6.88
+M0149,Real Zaragoza,P00157,Marc Aguado,MF,72,3,1,0,61,81,1,2,1,,6.59
+M0149,Real Zaragoza,P00158,Maikel Mesa,MF,86,0,0,0,71,87,0,0,0,,7.28
+M0149,Real Zaragoza,P00159,Víctor Mollejo,FW,82,3,0,0,31,74,0,0,1,,7.1
+M0149,Real Zaragoza,P00160,Iván Azón,FW,70,0,0,0,52,79,0,2,2,,6.27
+M0149,Real Zaragoza,P00161,Sergio Bermejo,FW,80,2,0,0,38,74,0,0,0,,6.47
+M0149,Real Zaragoza,P00162,Cristian Álvarez,DF,43,0,0,0,20,91,0,1,1,,6.77
+M0149,Real Zaragoza,P00163,Iván Calero,MF,18,0,0,0,23,76,1,1,1,,6.22
+M0149,Real Madrid,P00164,Thibaut Courtois,GK,84,0,0,0,10,74,0,2,2,,6.7
+M0149,Real Madrid,P00165,Dani Carvajal,DF,90,1,1,1,44,84,1,0,0,,7.76
+M0149,Real Madrid,P00166,Éder Militão,DF,90,0,1,0,77,76,3,0,2,,7.15
+M0149,Real Madrid,P00167,David Alaba,DF,62,0,0,1,19,95,3,0,1,,7.13
+M0149,Real Madrid,P00168,Ferland Mendy,DF,72,1,0,0,22,68,0,1,0,,7.36
+M0149,Real Madrid,P00169,Toni Kroos,MF,70,2,0,0,56,80,0,1,0,,7.41
+M0149,Real Madrid,P00170,Luka Modrić,MF,79,1,0,0,70,81,1,0,2,,7.05
+M0149,Real Madrid,P00171,Federico Valverde,MF,88,1,0,0,45,79,2,1,0,,6.89
+M0149,Real Madrid,P00172,Jude Bellingham,FW,72,1,0,0,72,77,0,0,2,,6.28
+M0149,Real Madrid,P00173,Vinícius Jr,FW,81,2,0,0,76,80,1,0,2,,6.65
+M0149,Real Madrid,P00174,Rodrygo,FW,44,2,0,0,18,64,0,0,1,,5.59
+M0149,Real Madrid,P00175,Thibaut Courtois,MF,17,1,0,0,14,85,2,1,1,,6.46
+M0063,Villarreal CF,P00176,Filip Jörgensen,GK,63,0,0,0,22,83,1,0,1,,6.95
+M0063,Villarreal CF,P00177,Juan Foyth,DF,83,0,0,0,42,84,1,1,0,,6.92
+M0063,Villarreal CF,P00178,Raúl Albiol,DF,81,1,0,0,73,88,2,0,0,,6.4
+M0063,Villarreal CF,P00179,Pau Torres,DF,90,1,0,0,49,81,3,2,0,,6.75
+M0063,Villarreal CF,P00180,Alfonso Pedraza,DF,86,1,0,0,58,86,1,0,1,,6.36
+M0063,Villarreal CF,P00181,Dani Parejo,MF,90,3,0,0,73,75,0,2,2,,8.31
+M0063,Villarreal CF,P00182,Étienne Capoue,MF,89,2,0,0,28,91,3,0,2,,7.44
+M0063,Villarreal CF,P00183,Álex Baena,MF,77,1,0,0,41,90,1,2,1,,7.72
+M0063,Villarreal CF,P00184,Gerard Moreno,FW,74,4,0,0,75,85,0,1,0,,6.73
+M0063,Villarreal CF,P00185,José Luis Morales,FW,88,1,0,0,45,80,1,2,1,,6.01
+M0063,Villarreal CF,P00186,Yeremy Pino,FW,61,0,0,0,70,63,0,1,2,,8.19
+M0063,Villarreal CF,P00187,Filip Jörgensen,MF,25,1,0,0,21,76,1,1,0,,6.02
+M0063,Villarreal CF,P00188,Juan Foyth,DF,43,0,0,0,10,87,1,1,1,,6.17
+M0063,Valencia CF,P00189,Giorgi Mamardashvili,GK,78,0,0,0,12,89,0,2,1,,6.55
+M0063,Valencia CF,P00190,Thierry Correia,DF,81,1,0,0,69,86,1,2,0,Yellow,7.23
+M0063,Valencia CF,P00191,Mouctar Diakhaby,DF,90,0,0,0,18,62,0,0,1,,6.72
+M0063,Valencia CF,P00192,Cristhian Mosquera,DF,68,0,0,0,74,79,3,0,0,,6.28
+M0063,Valencia CF,P00193,José Gayà,DF,64,0,0,0,75,89,2,2,1,Yellow,6.62
+M0063,Valencia CF,P00194,Pepelu,MF,85,1,0,0,32,81,1,1,2,Red,5.46
+M0063,Valencia CF,P00195,Javi Guerra,MF,88,4,0,0,23,85,1,2,1,,6.21
+M0063,Valencia CF,P00196,André Almeida,MF,67,0,0,0,38,69,1,0,2,,6.71
+M0063,Valencia CF,P00197,Diego López,FW,87,2,0,0,44,83,1,2,0,,6.57
+M0063,Valencia CF,P00198,Hugo Duro,FW,69,1,0,0,45,90,0,1,1,Red,5.92
+M0063,Valencia CF,P00199,Fran Pérez,FW,32,0,0,0,19,74,0,0,0,,6.6
+M0063,Valencia CF,P00200,Giorgi Mamardashvili,FW,43,2,0,0,22,82,0,0,0,,6.07
+M0003,Atlético de Madrid,P00201,Jan Oblak,GK,78,0,0,0,20,84,0,0,1,,6.53
+M0003,Atlético de Madrid,P00202,Nahuel Molina,DF,70,0,0,0,73,80,0,2,1,,6.85
+M0003,Atlético de Madrid,P00203,José Giménez,DF,73,0,0,0,30,85,3,0,0,,6.09
+M0003,Atlético de Madrid,P00204,Axel Witsel,DF,64,1,0,0,36,88,1,0,1,,7.61
+M0003,Atlético de Madrid,P00205,Mario Hermoso,DF,65,0,0,0,20,77,1,2,2,,6.63
+M0003,Atlético de Madrid,P00206,Koke,MF,71,2,0,0,50,78,1,0,1,Yellow,5.87
+M0003,Atlético de Madrid,P00207,Rodrigo De Paul,MF,82,1,0,0,52,92,0,2,2,,6.3
+M0003,Atlético de Madrid,P00208,Saúl Ñíguez,MF,82,4,0,0,55,95,1,2,1,,6.85
+M0003,Atlético de Madrid,P00209,Antoine Griezmann,FW,70,0,0,0,75,90,0,2,1,,5.7
+M0003,Atlético de Madrid,P00210,Álvaro Morata,FW,61,3,0,0,74,79,0,1,2,,6.46
+M0003,Atlético de Madrid,P00211,Samuel Lino,FW,71,0,0,0,29,88,1,2,1,,7.38
+M0003,Atlético de Madrid,P00212,Jan Oblak,FW,11,2,0,0,8,56,0,1,1,,6.86
+M0003,Atlético de Madrid,P00213,Nahuel Molina,FW,35,0,0,0,15,81,0,1,0,,6.1
+M0003,FC Barcelona,P00214,Marc-André ter Stegen,GK,72,1,0,0,18,75,1,1,0,Yellow,6.42
+M0003,FC Barcelona,P00215,Ronald Araújo,DF,87,1,1,0,23,73,3,1,1,,6.38
+M0003,FC Barcelona,P00216,Jules Koundé,DF,70,0,0,0,32,81,0,1,1,,7.3
+M0003,FC Barcelona,P00217,Andreas Christensen,DF,75,1,0,0,59,71,0,2,1,,5.57
+M0003,FC Barcelona,P00218,Alejandro Balde,DF,86,1,0,0,61,78,3,2,1,,5.43
+M0003,FC Barcelona,P00219,Frenkie de Jong,MF,79,1,0,0,40,82,0,0,2,,6.53
+M0003,FC Barcelona,P00220,Pedri,MF,61,0,0,0,33,92,1,2,2,,6.88
+M0003,FC Barcelona,P00221,Gavi,MF,70,0,0,0,40,89,2,2,1,Yellow,6.21
+M0003,FC Barcelona,P00222,Ilkay Gündogan,FW,73,3,0,0,38,77,1,1,1,,7.37
+M0003,FC Barcelona,P00223,Robert Lewandowski,FW,75,1,0,0,43,98,1,2,0,,6.13
+M0003,FC Barcelona,P00224,Raphinha,DF,23,0,0,0,30,72,2,0,1,,5.75
+M0003,FC Barcelona,P00225,Marc-André ter Stegen,DF,12,0,0,1,30,77,0,1,1,,6.78
+M0113,Real Betis,P00226,Rui Silva,GK,71,0,0,0,18,79,0,1,1,,5.57
+M0113,Real Betis,P00227,Héctor Bellerín,DF,68,0,0,0,37,73,2,2,1,,6.48
+M0113,Real Betis,P00228,Germán Pezzella,DF,62,0,0,0,54,67,3,1,0,,7.3
+M0113,Real Betis,P00229,Marc Bartra,DF,63,1,0,0,26,84,1,2,2,,7.46
+M0113,Real Betis,P00230,Juan Miranda,DF,65,1,0,0,67,82,2,2,2,,6.6
+M0113,Real Betis,P00231,Guido Rodríguez,MF,62,1,0,0,37,79,0,1,0,,6.88
+M0113,Real Betis,P00232,William Carvalho,MF,85,4,0,0,35,86,3,0,2,Yellow,7.29
+M0113,Real Betis,P00233,Isco,MF,82,1,0,0,52,68,3,1,0,,6.84
+M0113,Real Betis,P00234,Ayoze Pérez,FW,76,2,0,0,15,98,1,1,0,,7.6
+M0113,Real Betis,P00235,Borja Iglesias,FW,81,0,0,0,33,82,1,0,2,,6.79
+M0113,Real Betis,P00236,Luiz Henrique,FW,70,0,0,0,26,98,0,0,1,,5.91
+M0113,Real Betis,P00237,Rui Silva,MF,30,0,0,0,16,90,1,1,0,,6.52
+M0113,Real Betis,P00238,Héctor Bellerín,DF,39,0,0,0,24,80,2,1,1,,7.07
+M0113,FC Barcelona,P00239,Marc-André ter Stegen,GK,81,0,0,0,16,81,1,2,1,,6.25
+M0113,FC Barcelona,P00240,Ronald Araújo,DF,83,1,0,0,71,79,0,0,1,,5.48
+M0113,FC Barcelona,P00241,Jules Koundé,DF,86,1,0,1,66,81,1,2,1,,6.57
+M0113,FC Barcelona,P00242,Andreas Christensen,DF,84,1,0,0,45,79,3,1,2,,6.19
+M0113,FC Barcelona,P00243,Alejandro Balde,DF,60,0,0,0,49,76,1,1,0,,7.23
+M0113,FC Barcelona,P00244,Frenkie de Jong,MF,89,3,0,1,24,81,0,0,0,,7.34
+M0113,FC Barcelona,P00245,Pedri,MF,63,1,0,0,33,74,2,1,0,,6.02
+M0113,FC Barcelona,P00246,Gavi,MF,84,1,1,0,19,71,0,1,1,,6.11
+M0113,FC Barcelona,P00247,Ilkay Gündogan,FW,90,3,0,0,42,89,1,2,0,,6.67
+M0113,FC Barcelona,P00248,Robert Lewandowski,FW,66,1,0,0,30,76,1,2,1,,6.89
+M0113,FC Barcelona,P00249,Raphinha,FW,22,0,0,0,25,85,0,0,1,,6.07
+M0113,FC Barcelona,P00250,Marc-André ter Stegen,DF,37,0,1,0,19,83,2,0,1,,5.91

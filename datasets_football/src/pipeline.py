@@ -54,7 +54,7 @@ def extract_player_stats(path: Path) -> pd.DataFrame:
 
 
 # ----------------------------
-# Transform (Silver)
+# Transform 
 # ----------------------------
 def transform(matches: pd.DataFrame, stats: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     m = matches.copy()
@@ -158,7 +158,7 @@ def data_quality(matches: pd.DataFrame, stats: pd.DataFrame) -> None:
 
 
 # ----------------------------
-# Load Staging (Bronze->Silver->Staging)
+# Load Staging 
 # ----------------------------
 def load_staging(matches: pd.DataFrame, stats: pd.DataFrame) -> None:
     GOLD.mkdir(parents=True, exist_ok=True)
@@ -175,7 +175,7 @@ def load_staging(matches: pd.DataFrame, stats: pd.DataFrame) -> None:
 
 
 # ----------------------------
-# Build Data Warehouse (Gold)
+# Build Data Warehouse 
 # ----------------------------
 def build_dw() -> None:
     con = duckdb.connect(str(DB_PATH))
@@ -327,7 +327,7 @@ def build_kpis() -> None:
 def build_business_views() -> None:
     con = duckdb.connect(str(DB_PATH))
 
-    # 1) Top jugadores por rating (mín. 3 partidos, mín. 60 min media)
+    # 1) Top jugadores por rating 
     con.execute("""
         CREATE OR REPLACE VIEW vw_top_players_rating AS
         SELECT
@@ -341,11 +341,11 @@ def build_business_views() -> None:
         FROM fact_player_match
         WHERE rating IS NOT NULL AND minutes IS NOT NULL
         GROUP BY player_id, player_name, position, team_name
-        HAVING COUNT(*) >= 3 AND AVG(minutes) >= 60
+        HAVING COUNT(*) >= 1
         ORDER BY avg_rating DESC, matches_played DESC
     """)
 
-    # 2) Equipos: goles vs xG (diferencia = “over/under performance”)
+    # 2) Equipos: goles vs xG (diferencia vs goles esperados)
     con.execute("""
         CREATE OR REPLACE VIEW vw_team_goals_vs_xg AS
         WITH team_match AS (
@@ -373,11 +373,12 @@ def build_business_views() -> None:
             (AVG(goals) - AVG(xg)) AS goals_minus_xg
         FROM team_match tm
         JOIN dim_team t ON t.team_sk = tm.team_sk
-        GROUP BY t.team_name
+        GROUP BY t.team_name   
+        HAVING COUNT(*) >= 10  
         ORDER BY goals_minus_xg DESC, matches DESC
     """)
 
-    # 3) Tabla liga: puntos estimados (W=3, D=1, L=0)
+    # 3) Tabla liga: puntos estimados (Victoria=3, Empate=1, Derrota=0)
     con.execute("""
         CREATE OR REPLACE VIEW vw_league_table_points AS
         WITH home AS (
@@ -428,17 +429,20 @@ def build_business_views() -> None:
     con.execute("""
         CREATE OR REPLACE VIEW vw_win_drivers_deltas AS
         SELECT
-            match_id,
-            result,
-            (home_xG - away_xG) AS delta_xg,
-            (home_shots - away_shots) AS delta_shots,
-            (home_possession_pct - away_possession_pct) AS delta_possession
-        FROM fact_match
+            fm.match_id,
+            home_t.team_name || ' vs ' || away_t.team_name AS game,
+            fm.result,
+            (fm.home_xG - fm.away_xG) AS delta_xg,
+            (fm.home_shots - fm.away_shots) AS delta_shots,
+            (fm.home_possession_pct - fm.away_possession_pct) AS delta_possession
+        FROM fact_match fm
+        JOIN dim_team home_t ON home_t.team_sk = fm.home_team_sk
+        JOIN dim_team away_t ON away_t.team_sk = fm.away_team_sk
         WHERE
-            home_xG IS NOT NULL AND away_xG IS NOT NULL
-            AND home_shots IS NOT NULL AND away_shots IS NOT NULL
-            AND home_possession_pct IS NOT NULL AND away_possession_pct IS NOT NULL
-            AND result IS NOT NULL
+            fm.home_xG IS NOT NULL AND fm.away_xG IS NOT NULL
+            AND fm.home_shots IS NOT NULL AND fm.away_shots IS NOT NULL
+            AND fm.home_possession_pct IS NOT NULL AND fm.away_possession_pct IS NOT NULL
+            AND fm.result IS NOT NULL
     """)
 
     # 5) Top equipos por presión defensiva (tackles+interceptions por 90)
