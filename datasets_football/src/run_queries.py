@@ -7,9 +7,6 @@ DB_PATH = BASE_DIR / "data" / "gold" / "football_dw.duckdb"
 def main():
     con = duckdb.connect(str(DB_PATH))
 
-    # ----------------------------
-    # BUSINESS QUERIES
-    # ----------------------------
     print("\nTOP PLAYERS BY RATING")
     print(con.execute("""
         SELECT

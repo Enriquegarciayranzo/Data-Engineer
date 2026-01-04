@@ -1,6 +1,4 @@
-# src/pipeline.py
 from __future__ import annotations
-
 from pathlib import Path
 import logging
 import sys
@@ -8,9 +6,7 @@ import pandas as pd
 import duckdb
 
 
-# ----------------------------
 # Paths
-# ----------------------------
 BASE_DIR = Path(__file__).resolve().parents[1]
 BRONZE = BASE_DIR / "data" / "bronze"
 GOLD = BASE_DIR / "data" / "gold"
@@ -20,9 +16,7 @@ MATCHES_CSV = BRONZE / "futbol_matches.csv"
 STATS_CSV = BRONZE / "futbol_player_stats.csv"
 
 
-# ----------------------------
 # Logging
-# ----------------------------
 def setup_logging() -> None:
     log_dir = BASE_DIR / "logs"
     log_dir.mkdir(parents=True, exist_ok=True)
@@ -38,9 +32,7 @@ def setup_logging() -> None:
     )
 
 
-# ----------------------------
 # Extract
-# ----------------------------
 def extract_matches(path: Path) -> pd.DataFrame:
     # matches suele venir en latin1; si no, probamos utf-8
     try:
@@ -53,9 +45,7 @@ def extract_player_stats(path: Path) -> pd.DataFrame:
     return pd.read_csv(path, encoding="utf-8")
 
 
-# ----------------------------
 # Transform 
-# ----------------------------
 def transform(matches: pd.DataFrame, stats: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     m = matches.copy()
     s = stats.copy()
@@ -106,9 +96,7 @@ def transform(matches: pd.DataFrame, stats: pd.DataFrame) -> tuple[pd.DataFrame,
     return m, s
 
 
-# ----------------------------
 # Data Quality
-# ----------------------------
 def data_quality(matches: pd.DataFrame, stats: pd.DataFrame) -> None:
     required_matches = {"match_id", "date", "home_team", "away_team"}
     required_stats = {"match_id", "team", "player_id", "player_name", "minutes"}
@@ -157,9 +145,7 @@ def data_quality(matches: pd.DataFrame, stats: pd.DataFrame) -> None:
         raise ValueError("Hay fechas no parseables en matches (date -> NaT)")
 
 
-# ----------------------------
 # Load Staging 
-# ----------------------------
 def load_staging(matches: pd.DataFrame, stats: pd.DataFrame) -> None:
     GOLD.mkdir(parents=True, exist_ok=True)
 
@@ -174,9 +160,7 @@ def load_staging(matches: pd.DataFrame, stats: pd.DataFrame) -> None:
     con.close()
 
 
-# ----------------------------
 # Build Data Warehouse 
-# ----------------------------
 def build_dw() -> None:
     con = duckdb.connect(str(DB_PATH))
 
@@ -286,9 +270,7 @@ def build_dw() -> None:
     con.close()
 
 
-# ----------------------------
-# Gold KPIs (tabla resumen)
-# ----------------------------
+# Gold KPIs 
 def build_kpis() -> None:
     con = duckdb.connect(str(DB_PATH))
 
@@ -463,10 +445,7 @@ def build_business_views() -> None:
 
     con.close()
 
-
-# ----------------------------
 # Main
-# ----------------------------
 def main() -> None:
     setup_logging()
     logging.info("START pipeline")
