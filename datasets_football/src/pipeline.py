@@ -1,8 +1,6 @@
 from __future__ import annotations
-
 import logging
 from pathlib import Path
-
 from logging_config import setup_logging
 from extract import extract_matches, extract_player_stats
 from transform import transform
