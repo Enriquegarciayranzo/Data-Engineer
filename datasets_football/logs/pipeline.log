@@ -19,3 +19,5 @@
 2026-01-04 12:39:27,048 | INFO | START pipeline
 2026-01-04 12:40:17,794 | INFO | START pipeline
 2026-01-04 12:40:18,159 | INFO | DONE pipeline. DuckDB at C:\Users\usuario\OneDrive - UNIVERSIDAD SAN JORGE\CARRERA\3º CARRERA\ASIGNATURAS 1 CUATRIMESTRE\1) INGENIERIA DE DATOS\Data-Engineer\datasets_football\data\gold\football_dw.duckdb
+2026-01-09 12:13:32,347 | INFO | START pipeline
+2026-01-09 12:13:32,594 | INFO | DONE pipeline. DuckDB at C:\Users\usuario\OneDrive - UNIVERSIDAD SAN JORGE\CARRERA\3º CARRERA\ASIGNATURAS 1 CUATRIMESTRE\1) INGENIERIA DE DATOS\Data-Engineer\datasets_football\data\gold\football_dw.duckdb
