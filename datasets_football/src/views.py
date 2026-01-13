@@ -3,9 +3,6 @@ from pathlib import Path
 import duckdb
 
 def build_business_views(db_path: Path) -> None:
-    """
-    Create business-friendly views for analytics.
-    """
     con = duckdb.connect(str(db_path))
 
     # 1) Top players by rating
