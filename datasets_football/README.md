@@ -11,11 +11,11 @@ good practices in data architecture, data quality, orchestration and monitoring.
 # 2. Datasets
 The pipeline uses two related datasets:
 
-- **Football matches dataset**  
+- *Football matches dataset*  
   Contains information at match level, such as teams, goals, shots, expected goals (xG),
   possession, attendance, stadium, referee, league and season.
 
-- **Football player statistics dataset**  
+- *Football player statistics dataset* 
   Contains player performance data per match, including minutes played, goals, assists,
   passes, tackles, interceptions, cards and ratings.
 
@@ -25,18 +25,18 @@ Both datasets are linked using the match_id field.
 # 3. Data Architecture
 The project follows a layered architecture inspired by the medallion approach:
 
-# Bronze Layer
+Bronze Layer
 - Raw CSV files.
 - Data is stored without modifications.
 - Acts as the source of truth.
 
-# Silver Layer
+Silver Layer
 - Data is cleaned and normalized in memory using pandas.
 - Column names are standardized.
 - Dates and numeric fields are parsed.
 - Basic data quality rules are applied.
 
-# Gold Layer
+Gold Layer
 - Implemented using DuckDB.
 - Contains analytical tables:
   - Dimension tables
@@ -82,13 +82,13 @@ If any validation fails, the pipeline stops to avoid loading incorrect data.
 The DuckDB data warehouse follows a star schema:
 
 # Dimensions
-- **dim_team**: football teams
-- **dim_player**: players (using player_id as natural key)
-- **dim_date**: calendar attributes derived from match dates
+- *dim_team*: football teams
+- *dim_player*: players (using player_id as natural key)
+- *dim_date*: calendar attributes derived from match dates
 
 # Fact Tables
-- **fact_match**: match-level information and results
-- **fact_player_match**: player performance per match
+- *fact_match*: match-level information and results
+- *fact_player_match*: player performance per match
 
 This model supports analytical queries.
 
