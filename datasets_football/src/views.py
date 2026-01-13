@@ -3,6 +3,7 @@ from pathlib import Path
 import duckdb
 
 def build_business_views(db_path: Path) -> None:
+    # Connect to the DuckDB database to create analytical views
     con = duckdb.connect(str(db_path))
 
     # 1) Top players by rating
