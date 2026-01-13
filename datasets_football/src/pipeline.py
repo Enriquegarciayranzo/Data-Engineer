@@ -25,12 +25,15 @@ def main() -> None:
     setup_logging(BASE_DIR)
     logging.info("START pipeline")
 
+    # Extract raw datasets
     matches_raw = extract_matches(MATCHES_CSV)
     stats_raw = extract_player_stats(STATS_CSV)
 
+    # Transform and validate data
     matches, stats = transform(matches_raw, stats_raw)
     data_quality(matches, stats)
 
+    # Load data and build analytical layer
     load_staging(matches, stats, DB_PATH)
     build_dw(DB_PATH)
     build_kpis(DB_PATH)

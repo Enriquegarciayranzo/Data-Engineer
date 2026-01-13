@@ -4,7 +4,8 @@ import logging
 import sys
 from pathlib import Path
 
-
+# Configure application logging.
+# Logs are written both to a file for monitoring and to the console for debugging.
 def setup_logging(base_dir: Path) -> None:
     log_dir = base_dir / "logs"
     log_dir.mkdir(parents=True, exist_ok=True)

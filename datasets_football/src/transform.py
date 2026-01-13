@@ -1,15 +1,12 @@
 from __future__ import annotations
-
 import pandas as pd
 
-
+# Clean and normalize raw datasets.
+# This step standardizes column names, parses dates and enforces data types.
 def transform(
     matches: pd.DataFrame,
     stats: pd.DataFrame
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """
-    Clean and normalize raw datasets.
-    """
     m = matches.copy()
     s = stats.copy()
 
@@ -27,6 +24,8 @@ def transform(
         "home_xG", "away_xG", "home_possession_pct",
         "away_possession_pct", "attendance",
     ]
+
+    # Convert numeric columns in matches
     for col in numeric_cols_matches:
         if col in m.columns:
             m[col] = pd.to_numeric(m[col], errors="coerce")
@@ -49,7 +48,7 @@ def transform(
         if col in s.columns:
             s[col] = s[col].astype(str).str.strip()
 
-    # Ensure match_id as string
+    # Ensure match_id is string in both datasets
     if "match_id" in m.columns:
         m["match_id"] = m["match_id"].astype(str).str.strip()
     if "match_id" in s.columns:

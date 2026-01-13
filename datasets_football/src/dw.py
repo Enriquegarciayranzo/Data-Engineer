@@ -1,18 +1,9 @@
 from __future__ import annotations
-
 from pathlib import Path
 import duckdb
 
-
 def build_dw(db_path: Path) -> None:
-    """
-    Build a simple star schema in DuckDB:
-    - dim_team
-    - dim_player
-    - dim_date
-    - fact_match
-    - fact_player_match
-    """
+    # Connect to the DuckDB analytical database
     con = duckdb.connect(str(db_path))
 
     # DIM: team
@@ -31,7 +22,7 @@ def build_dw(db_path: Path) -> None:
         WHERE team_name IS NOT NULL AND team_name <> ''
     """)
 
-    # DIM: player (player_id as natural key)
+    # DIM: player 
     con.execute("""
         CREATE OR REPLACE TABLE dim_player AS
         SELECT
@@ -90,7 +81,7 @@ def build_dw(db_path: Path) -> None:
         LEFT JOIN dim_team away_t ON away_t.team_name = m.away_team
     """)
 
-    # FACT: player-match (player stats per match)
+    # FACT: player-match 
     con.execute("""
         CREATE OR REPLACE TABLE fact_player_match AS
         SELECT
