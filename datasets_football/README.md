@@ -117,7 +117,7 @@ These outputs show how raw data can be transformed into useful insights.
 Basic monitoring is implemented using Python logging.
 
 - Each pipeline execution logs start and end messages.
-- Logs are written to a file (`pipeline.log`) and to the console.
+- Logs are written to a file (pipeline.log) and to the console.
 - Errors stop the pipeline execution.
 
 This allows simple monitoring and debugging.
@@ -141,7 +141,7 @@ The data can be consumed by:
 - BI dashboards
 - Further analytical or machine learning tasks
 
-An example script (`query_demo.py`) shows how to query KPIs and business views.
+An example script (query_demo.py) shows how to query KPIs and business views.
 
 
 # 11. Privacy and Ethics
