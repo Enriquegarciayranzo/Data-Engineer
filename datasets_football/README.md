@@ -156,6 +156,9 @@ pip install pandas duckdb
 Run the code:
 python src/pipeline.py
 
+Show the results:
+python src/query_demo.py
+
 
 # 13. Conclusion
 This project shows how a complete data engineering pipeline can be built from start to end using simple and clear tools. Raw football data is 
