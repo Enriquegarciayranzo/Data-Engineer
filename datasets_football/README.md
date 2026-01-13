@@ -2,11 +2,7 @@
 # 1. Project Overview
 This project implements a complete data engineering pipeline using football data.
 The objective is to cover the full data lifecycle, from raw data ingestion to analytical
-tables that can be used for analysis and insights.
-
-The project has been developed as part of the Data Engineering course and follows
-good practices in data architecture, data quality, orchestration and monitoring.
-
+ta 
 
 # 2. Datasets
 The pipeline uses two related datasets:
