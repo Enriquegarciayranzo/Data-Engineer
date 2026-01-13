@@ -1,8 +1,8 @@
 # Football Data Engineering Project
 # 1. Project Overview
 This project implements a complete data engineering pipeline using football data.
-The objective is to cover the full data lifecycle, from raw data ingestion to analytical
-ta 
+The objective is to cover the full data lifecycle, from raw data ingestion to analytical tables and business insights.
+
 
 # 2. Datasets
 The pipeline uses two related datasets:
@@ -55,9 +55,7 @@ The execution flow is:
 6. Generate KPIs  
 7. Create business views  
 
-Each step is implemented in a separate module, which makes the pipeline easy to
-understand, maintain and extend.
-
+Each step is implemented as a separate function within the pipeline, which makes the process easy to understand, maintain and extend.
 The pipeline is designed to run as a daily batch process.
 
 
@@ -148,7 +146,7 @@ local execution.
 
 - x10: The current solution would still work with small adjustments.
 - x100: Processing time would increase noticeably; memory usage could become an issue.
-- x1000: Pandas would no longer be efficient. Distributed processing would be required.
+- x1000: Pandas may become inefficient depending on hardware limitations, more scalable processing tools would be recommended.
 - x10⁶: A local solution would not be feasible.
 
 Proposed solution:
