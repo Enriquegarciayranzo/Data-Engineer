@@ -1,7 +1,8 @@
 # Football Data Engineering Project
 # 1. Project Overview
 This project implements a complete data engineering pipeline using football data.
-The objective is to cover the full data lifecycle, from raw data ingestion to analytical tables that can be used for business insights.
+The objective is to cover the full data lifecycle, from raw data ingestion to analytical
+tables that can be used for analysis and insights.
 
 The project has been developed as part of the Data Engineering course and follows
 good practices in data architecture, data quality, orchestration and monitoring.
@@ -11,10 +12,12 @@ good practices in data architecture, data quality, orchestration and monitoring.
 The pipeline uses two related datasets:
 
 - **Football matches dataset**  
-  Contains information at match level, such as teams, goals, shots, expected goals (xG), possession, attendance, stadium, referee, league and season.
+  Contains information at match level, such as teams, goals, shots, expected goals (xG),
+  possession, attendance, stadium, referee, league and season.
 
 - **Football player statistics dataset**  
-  Contains player performance data per match, including minutes played, goals, assists, passes, tackles, interceptions, cards and ratings.
+  Contains player performance data per match, including minutes played, goals, assists,
+  passes, tackles, interceptions, cards and ratings.
 
 Both datasets are linked using the match_id field.
 
@@ -59,11 +62,7 @@ The execution flow is:
 Each step is implemented in a separate module, which makes the pipeline easy to
 understand, maintain and extend.
 
-The pipeline is designed to run as a **daily batch process**.
-In a production environment, it could be scheduled using:
-- Windows Task Scheduler or cron
-- GitHub Actions (scheduled workflow)
-- A workflow orchestrator such as Airflow
+The pipeline is designed to run as a daily batch process.
 
 
 # 5. Data Quality
@@ -84,14 +83,14 @@ The DuckDB data warehouse follows a star schema:
 
 # Dimensions
 - **dim_team**: football teams
-- **dim_player**: players (using `player_id` as natural key)
+- **dim_player**: players (using player_id as natural key)
 - **dim_date**: calendar attributes derived from match dates
 
 # Fact Tables
 - **fact_match**: match-level information and results
 - **fact_player_match**: player performance per match
 
-This model supports analytical queries and BI tools.
+This model supports analytical queries.
 
 
 # 7. KPIs and Business Views
@@ -110,8 +109,6 @@ In addition, business-oriented views are created, including:
 - Match performance differentials
 - Defensive intensity by team
 
-These outputs show how raw data can be transformed into useful insights.
-
 
 # 8. Monitoring and Logging
 Basic monitoring is implemented using Python logging.
@@ -120,36 +117,13 @@ Basic monitoring is implemented using Python logging.
 - Logs are written to a file (pipeline.log) and to the console.
 - Errors stop the pipeline execution.
 
-This allows simple monitoring and debugging.
 
-
-# 9. Scalability Considerations
-If data volume increases (x10, x100, x1000):
-
-- Raw data could be stored in cloud object storage.
-- Pandas transformations could be replaced by distributed processing tools.
-- DuckDB could be migrated to a cloud data warehouse.
-- A dedicated orchestrator could manage retries and alerts.
-
-The modular design makes these changes possible with limited refactoring.
-
-
-# 10. Data Consumption
-The data can be consumed by:
-
-- Data analysts using SQL
-- BI dashboards
-- Further analytical or machine learning tasks
-
+# 9. Data Consumption
+The data can be consumed by analytical users using SQL queries.
 An example script (query_demo.py) shows how to query KPIs and business views.
 
 
-# 11. Privacy and Ethics
-The datasets do not contain personal or sensitive data.
-Only sports performance information is processed, so privacy risks are minimal.
-
-
-# 12. How to Run the Project
+# 10. How to Run the Project
 Install dependencies:
 pip install pandas duckdb
 
@@ -160,7 +134,7 @@ Show the results:
 python src/query_demo.py
 
 
-# 13. Conclusion
+# 11. Conclusion
 This project shows how a complete data engineering pipeline can be built from start to end using simple and clear tools. Raw football data is 
 ingested, cleaned, validated and transformed into an analytical data warehouse that can be easily queried. The project covers the full data 
 lifecycle, including data quality checks, data modeling, KPI generation and business views. The pipeline is modular, easy to understand and 
@@ -168,3 +142,66 @@ designed to run as a daily batch process, which makes it realistic and close to 
 included to control pipeline executions and detect errors. Even though the project runs locally, it is designed in a way that allows future 
 improvements, such as better orchestration, cloud storage or more advanced analytics. Overall, this project demonstrates a solid understanding 
 of the main concepts of data engineering and how they can be applied to transform raw data into useful insights.
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+# The scalability of the project should be considered, so you need to infer the performance and costs of multiplying the amount of raw data by
+# x10, x100, x1000, x10^6 (That is, the number of rows). A proposal should be made to address those problems.
+If the volume of raw data increases, the current solution may face performance limitations, mainly due to in-memory processing with pandas and
+local execution.
+
+- x10: The current solution would still work with small adjustments.
+- x100: Processing time would increase noticeably; memory usage could become an issue.
+- x1000: Pandas would no longer be efficient. Distributed processing would be required.
+- x10⁶: A local solution would not be feasible.
+
+Proposed solution:
+- Store raw data in cloud object storage.
+- Replace pandas with distributed tools (e.g. Spark).
+- Use a cloud data warehouse for analytical queries.
+- Use a workflow orchestrator to manage execution and retries.
+
+
+# How much money will it cost if we migrate this to a cloud provider? Consider the x10, x100, x1000, x10^6 scenarios. Take one cloud provider
+# to calculate it.
+Assuming migration to AWS:
+
+- *Storage (S3)*: very low cost per GB.
+- *Processing (EC2 / Spark)*: cost increases with data volume and execution time.
+- *Data warehouse (Athena / Redshift)*: cost depends on query usage.
+
+Approximate estimation:
+- x10: low monthly cost (few euros).
+- x100: moderate cost (tens of euros).
+- x1000: high cost (hundreds of euros).
+- x10⁶: enterprise-level cost (thousands of euros).
+
+Exact cost depends on usage patterns and optimization.
+
+
+# Think about who can consume the data and design a solution to deliver it.
+The data can be consumed by:
+- Data analysts using SQL.
+- BI dashboards (e.g. Looker Studio).
+- Data scientists for further analysis or modeling.
+
+The delivery solution would be:
+- A shared analytical database.
+- Read-only access for consumers.
+- Predefined views for business users.
+
+
+# Explain how AI can help with any of the processes.
+AI can support several parts of the pipeline:
+- Automatic data quality anomaly detection.
+- Schema change detection.
+- Query optimization suggestions.
+- Automated insight generation from KPIs.
+- Forecasting and predictive analytics based on historical data.
+
+AI can improve efficiency and reduce manual work.
+
+
+# Is there any concern about privacy?
+The datasets contain no personal or sensitive information. Only sports performance data is processed, so privacy and GDPR risks are minimal.
+However, access control would still be required in a real production environment.
