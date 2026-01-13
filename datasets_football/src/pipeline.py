@@ -10,7 +10,6 @@ from dw import build_dw
 from kpis import build_kpis
 from views import build_business_views
 
-
 # Paths (keep centralized here)
 BASE_DIR = Path(__file__).resolve().parents[1]
 BRONZE = BASE_DIR / "data" / "bronze"
@@ -19,7 +18,6 @@ DB_PATH = GOLD / "football_dw.duckdb"
 
 MATCHES_CSV = BRONZE / "futbol_matches.csv"
 STATS_CSV = BRONZE / "futbol_player_stats.csv"
-
 
 def main() -> None:
     setup_logging(BASE_DIR)
@@ -40,7 +38,6 @@ def main() -> None:
     build_business_views(DB_PATH)
 
     logging.info("DONE pipeline. DuckDB at %s", DB_PATH)
-
 
 if __name__ == "__main__":
     main()

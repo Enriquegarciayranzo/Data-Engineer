@@ -1,12 +1,10 @@
 from __future__ import annotations
-
 from pathlib import Path
 import duckdb
 
 # Resolve project base directory and DuckDB database path
 BASE_DIR = Path(__file__).resolve().parents[1]
 DB_PATH = BASE_DIR / "data" / "gold" / "football_dw.duckdb"
-
 
 def main() -> None:
     con = duckdb.connect(str(DB_PATH))
@@ -36,7 +34,6 @@ def main() -> None:
     print(con.execute("SELECT * FROM vw_team_defensive_intensity LIMIT 10").df())
 
     con.close()
-
 
 if __name__ == "__main__":
     main()

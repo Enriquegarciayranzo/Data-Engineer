@@ -1,8 +1,6 @@
 from __future__ import annotations
-
 from pathlib import Path
 import duckdb
-
 
 def build_business_views(db_path: Path) -> None:
     """
